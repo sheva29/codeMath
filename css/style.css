@@ -1,0 +1,14 @@
+
+
+@import url('bootstrap.css');
+@import url('bootstrap-theme.css');
+
+@font-face {
+    font-family: 'Klavika-Light';
+    src: url('../fonts/Klavika-Light.bmap') format('bmap'),
+    	 url('../fonts/Klavika-Light.otf') format('otf'),
+         url('../fonts/Klavika-Light.woff') format('woff'),
+         
+    font-weight: normal;
+    font-style: normal;
+}
