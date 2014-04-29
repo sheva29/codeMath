@@ -5,11 +5,15 @@
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title> codeMath </title>
-
+	    <link rel="icon" type="image/ico" href="images/logoico.ico">
+	    <!--Style Sheet -->
 	    <link href="css/style.css" rel="stylesheet">
-	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	    <!--Libraries-->
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
 
 	</head>
 
@@ -17,23 +21,52 @@
 
 		<header class="navbar header navbar-default navbar-fixed-top" >
 			<div class="container">				
-				<div class="nav-header logo-container">
-					 <a href="www.google.com"><img id="logo" width="100" height="80" src="images/logo.svg"> </img>  </a>
+				<div class="navbar-header logo-container">
+					 <button  class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+					 	<span class="sr-only">Toogle navigation </span>
+					 	<span class="icon-bar"></span>
+					 	<span class="icon-bar"></span>
+					 	<span class="icon-bar"></span>
+					 	
+					 </button>
+					 <a href="www.google.com"><img id="logo" width="100" height="80" src="images/logo.svg"> </img></a>					
 				</div>
-				<div class="navbar navbar-collapse menu-container">
-					 <ul class="navbar-nav nav main-menu">
-						<li> What's code Math </li>
-						<li> Trajectory </li>
-						<li> Framework Example </li>
-						<li> Contact </li>
+				<nav class="collapse navbar navbar-collapse menu-container bs-navbar-collapse" role="navigation" >
+					 <ul class="navbar-nav nav" id="menu">
+						<li class="menu-items" data-menuanchor="firstPage">  <a href="#firstPage">  what's codeMath? </a></li>
+						<li class="menu-items" data-menuanchor="secondPage"> <a href="#secondPage">  trajectory  </a> </li>
+						<li class="menu-items" data-menuanchor="thirdPage">  <a href="#thirdPage">  frameworkExample </a> </li>
+						<li class="menu-items" data-menuanchor="fourthPage"> <a href="#fourthPage">  contact </a> </li>
 					</ul>
-				</div>
+				</nav>
 			</div>			
 		</header>
 
-		<div class="container">
+		<div class="container" id="fullpage" style="height: 100%; position: relative; top: 0px;" >
+			
+			<section class="section" id="what-code-math" data-anchor="firstPage">
+				<h2> what codeMath is? </h2>
+			</section>
+
+			<section class="section" id="trajectory" data-anchor="secondPage">
+				<h2> trajectory </h2>
+			</section>
+
+			<section class="section" id="code-examples" data-anchor="thirdPage">
+				<h2> frameworkExamples </h2>
+			</section>
+
+			<section class="section" id="contact" data-anchor="fourthPage">
+				<h2> contact </h2>
+			</section>
 
 		</div>
+
+		<footer class="container">
+
+		</foooter>
+		<script src="js/main.js"></script>
+
 
 	</body>
 
