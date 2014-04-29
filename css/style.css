@@ -5,10 +5,52 @@
 
 @font-face {
     font-family: 'Klavika-Light';
-    src: url('../fonts/Klavika-Light.bmap') format('bmap'),
-    	 url('../fonts/Klavika-Light.otf') format('otf'),
-         url('../fonts/Klavika-Light.woff') format('woff'),
-         
+    src: url('../fonts/Klavika/Klavika-Light.bmap') format('bmap'),
+    	 url('../fonts/Klavika/Klavika-Light.otf') format('otf'),
+         url('../fonts/Klavika/Klavika-Light.woff') format('woff');         
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Elderkin-Medium';
+    src: url('../fonts/Elderkin-Medium/Elderkin-Medium.bmap') format('bmap'),
+    	 url('../fonts/Elderkin-Medium/Elderkin-Medium.otf') format('otf'),
+         url('../fonts/Elderkin-Medium/Elderkin-Medium.woff') format('woff');         
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+
+    font-family: 'Klavika-light', 'sans-serif'; 
+}
+
+h1, h2 {
+
+    font-family: 'Elderkin-Medium', 'sans-serif';    
+}
+
+#logo{
+
+    margin: 20px 60px 20px 60px;
+}
+
+.logo-container{
+
+    float: left;
+}
+
+.main-menu{
+
+    font-family: 'Elderkin-Medium', 'sans-serif'; 
+}
+
+.menu-container{
+
+    float: left;
+}
+
+
+
+
