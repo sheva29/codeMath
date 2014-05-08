@@ -7,7 +7,7 @@ Let's get some help from BootStrap
 @import url('bootstrap.css');
 @import url('bootstrap-theme.css');
 
-@font-face {
+/*@font-face{
     font-family: 'Klavika-Light';
     src: url('../fonts/Klavika/Klavika-Light.bmap') format('bmap'),
     	 url('../fonts/Klavika/Klavika-Light.otf') format('otf'),
@@ -16,25 +16,77 @@ Let's get some help from BootStrap
     font-style: normal;
 }
 
-@font-face {
+@font-face{
     font-family: 'Elderkin-Medium';
     src: url('../fonts/Elderkin-Medium/Elderkin-Medium.bmap') format('bmap'),
     	 url('../fonts/Elderkin-Medium/Elderkin-Medium.otf') format('otf'),
          url('../fonts/Elderkin-Medium/Elderkin-Medium.woff') format('woff');         
     font-weight: normal;
     font-style: normal;
+}*/
+
+@font-face{
+    font-family:'Gotham-Book';
+    src: url('../fonts/Gotham/Gotham-Book.pfb') format('pfb'),
+         url('../fonts/Gotham/Gotham-Book.otf') format('otf'),
+         rl('../fonts/Gotham/Gotham-Book.svg') format('svg'),
+         url('../fonts/Gotham/Gotham-Book.woff') format('woff');         
+    font-weight: normal;
+    font-style: normal;
 }
 
-body {
+@font-face{
+    font-family:'Gotham-Light';
+    src: url('../fonts/Gotham/Gotham-Light.pfb') format('pfb'),
+         url('../fonts/Gotham/Gotham-Light.otf') format('otf'),
+         rl('../fonts/Gotham/Gotham-Light.svg') format('svg'),
+         url('../fonts/Gotham/Gotham-Light.woff') format('woff');         
+    font-weight: normal;
+    font-style: normal;
+}
 
-    font-family: 'Klavika-light', 'sans-serif'; 
+@font-face{
+    font-family:'Gotham-Round-Light';
+    src: url('../fonts/GothamRounded/GothamRounded-Light.pfb') format('pfb'),
+         url('../fonts/GothamRounded/GothamRnd-Light.otf') format('otf'),
+         rl('../fonts/GothamRounded/GothamRnd-Light.svg') format('svg'),
+         url('../fonts/GothamRounded/GothamRnd-Light.woff') format('woff');         
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family:'Gotham-Round-Book';
+    src: url('../fonts/GothamRounded/GothamRounded-Book.pfb') format('pfb'),
+         url('../fonts/GothamRounded/GothamRnd-Book.otf') format('otf'),
+         rl('../fonts/GothamRounded/GothamRnd-Book.svg') format('svg'),
+         url('../fonts/GothamRounded/GothamRnd-Book.woff') format('woff');         
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family:'Gotham-Round-Bold';
+    src: url('../fonts/GothamRounded/GothamRounded-Bold.pfb') format('pfb'),
+         url('../fonts/GothamRounded/GothamRnd-Bold.otf') format('otf'),
+         rl('../fonts/GothamRounded/GothamRnd-Bold.svg') format('svg'),
+         url('../fonts/GothamRounded/GothamRnd-Bold.woff') format('woff');         
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    font-family: 'Gotham-Book', 'sans-serif'; 
     color: #686868;
-
 }
 
-h1, h2 {
+h1, h2{
+    font-family: 'Gotham-Round-Bold', 'sans-serif';    
+}
 
-    font-family: 'Elderkin-Medium', 'sans-serif';    
+h2{
+    color: #d1d1d1;
 }
 
 /*
@@ -45,17 +97,14 @@ These are the elements for navigation bar
 */
 
 #logo{
-
     margin: 20px 60px 20px 60px;
 }
 
 .logo-container{
-
     float: left;
 }
 
 #menu{
-
     font-family: 'Elderkin-Medium', 'sans-serif'; 
 }
 
@@ -65,12 +114,10 @@ These are the elements for navigation bar
 }*/
 
 .menu-items{
-
     font-size: 24px;
     margin: 0 10px;
     margin-top: 35px;
     float: left;
-
 }
 
 
@@ -82,54 +129,62 @@ These are the elements of content
 */
 
 #what-code-math{
-
-    background-color: blue;
+    /*background-color: blue;*/
     width: 100%;
     height: 100%;
-
 }
 
-#trajectory{
-    
-    background-color: green;
+#trajectory{    
+    /*background-color: green;*/
     width: 100%;
     height: 100%;
-
 }
 
-#code-examples{
-    
-    background-color: yellow;
+#code-examples{    
+    /*background-color: yellow;*/
     width: 100%;
     height: 100%;
-
 }
 
 #contact{    
-    background-color: brown;
+    /*background-color: brown;*/
     width: 100%;
     height: 100%;
-
 }
 
 #what-code-image{
-
     float:left;
 }
 
 #codeMath-definition{
-
-
     float: left;
-    margin: 300px auto 200px auto;
+    margin: 37px auto 20px 200px;
+    width: 500px;
+    height: 300px;
+    font-size: 24px;
 }
 
-/*This is to overwrites the class that fullpage.js does.
+.what-content{
+
+}
+
+.what-title{
+    margin: 20px 0px 29px 32px;
+}
+
+.page-text{
+    color: #d1d1d1;
+}
+
+
+
+
+/*This is to overwrite the classes that fullpage.js adds.
 /
 */
 .tableCell{
-
     padding-top: 122px;
+
 }
 
 .table{
