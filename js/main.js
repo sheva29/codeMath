@@ -6,8 +6,8 @@ $(document).ready(function () {
 	//Listeners and Triggers
 	//
 	$('#fullpage').fullpage({
-		slidesColor: ['#465fab', '#440bfbe', '#7e4f9f', '#cd6438', '#b0cc3a'],
-		anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+		slidesColor: ['#d36257', '#59d159', '#d3c157', '#59d18f', '#5760d3'],
+		anchors: ['zeroPage','firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
 		menu: '#menu',
 		continuousVertical: true
 	});

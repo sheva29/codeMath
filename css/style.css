@@ -29,7 +29,7 @@ Let's get some help from BootStrap
     font-family:'Gotham-Book';
     src: url('../fonts/Gotham/Gotham-Book.pfb') format('pfb'),
          url('../fonts/Gotham/Gotham-Book.otf') format('otf'),
-         rl('../fonts/Gotham/Gotham-Book.svg') format('svg'),
+         url('../fonts/Gotham/Gotham-Book.svg') format('svg'),
          url('../fonts/Gotham/Gotham-Book.woff') format('woff');         
     font-weight: normal;
     font-style: normal;
@@ -39,7 +39,7 @@ Let's get some help from BootStrap
     font-family:'Gotham-Light';
     src: url('../fonts/Gotham/Gotham-Light.pfb') format('pfb'),
          url('../fonts/Gotham/Gotham-Light.otf') format('otf'),
-         rl('../fonts/Gotham/Gotham-Light.svg') format('svg'),
+         url('../fonts/Gotham/Gotham-Light.svg') format('svg'),
          url('../fonts/Gotham/Gotham-Light.woff') format('woff');         
     font-weight: normal;
     font-style: normal;
@@ -49,7 +49,7 @@ Let's get some help from BootStrap
     font-family:'Gotham-Round-Light';
     src: url('../fonts/GothamRounded/GothamRounded-Light.pfb') format('pfb'),
          url('../fonts/GothamRounded/GothamRnd-Light.otf') format('otf'),
-         rl('../fonts/GothamRounded/GothamRnd-Light.svg') format('svg'),
+         url('../fonts/GothamRounded/GothamRnd-Light.svg') format('svg'),
          url('../fonts/GothamRounded/GothamRnd-Light.woff') format('woff');         
     font-weight: normal;
     font-style: normal;
@@ -59,7 +59,7 @@ Let's get some help from BootStrap
     font-family:'Gotham-Round-Book';
     src: url('../fonts/GothamRounded/GothamRounded-Book.pfb') format('pfb'),
          url('../fonts/GothamRounded/GothamRnd-Book.otf') format('otf'),
-         rl('../fonts/GothamRounded/GothamRnd-Book.svg') format('svg'),
+         url('../fonts/GothamRounded/GothamRnd-Book.svg') format('svg'),
          url('../fonts/GothamRounded/GothamRnd-Book.woff') format('woff');         
     font-weight: normal;
     font-style: normal;
@@ -69,35 +69,33 @@ Let's get some help from BootStrap
     font-family:'Gotham-Round-Bold';
     src: url('../fonts/GothamRounded/GothamRounded-Bold.pfb') format('pfb'),
          url('../fonts/GothamRounded/GothamRnd-Bold.otf') format('otf'),
-         rl('../fonts/GothamRounded/GothamRnd-Bold.svg') format('svg'),
+         url('../fonts/GothamRounded/GothamRnd-Bold.svg') format('svg'),
          url('../fonts/GothamRounded/GothamRnd-Bold.woff') format('woff');         
     font-weight: normal;
     font-style: normal;
 }
 
-
 body{
-    font-family: 'Gotham-Book', 'sans-serif'; 
-    color: #686868;
+    font-family: 'Gotham-Round-Book', 'sans-serif'; 
+    color: #EBE9E9;
 }
 
 h1, h2{
-    font-family: 'Gotham-Round-Bold', 'sans-serif';    
+    font-family: 'Gotham-Round-Bold', 'sans-serif'; 
+    text-transform:uppercase;   
 }
 
 h2{
-    color: #d1d1d1;
+    color: #EBE9E9;
 }
-
 /*
 /
 /
 These are the elements for navigation bar
 /
 */
-
 #logo{
-    margin: 20px 60px 20px 60px;
+    margin: 15px 60px 15px 60px;
 }
 
 .logo-container{
@@ -105,7 +103,9 @@ These are the elements for navigation bar
 }
 
 #menu{
-    font-family: 'Elderkin-Medium', 'sans-serif'; 
+
+    text-transform:uppercase;
+    font-family: 'Gotham-Round-Bold', 'sans-serif'; 
 }
 
 /*.menu-container{
@@ -114,10 +114,15 @@ These are the elements for navigation bar
 }*/
 
 .menu-items{
-    font-size: 24px;
+    font-size: 16px;
     margin: 0 10px;
-    margin-top: 35px;
+    margin-top: 30px;
     float: left;
+}
+
+#brand{
+    color: #b9d657;
+    font-family: 'Gotham-Round-Light', 'sans-serif';
 }
 
 
@@ -154,11 +159,12 @@ These are the elements of content
 
 #what-code-image{
     float:left;
+    margin: 45px auto 20px 80px;
 }
 
 #codeMath-definition{
     float: left;
-    margin: 37px auto 20px 200px;
+    margin: 90px auto 20px 50px;
     width: 500px;
     height: 300px;
     font-size: 24px;
@@ -168,13 +174,13 @@ These are the elements of content
 
 }
 
-.what-title{
-    margin: 20px 0px 29px 32px;
+.page-title{
+    margin: 30px 0px 30px 60px;
 }
 
-.page-text{
+/*.page-text{
     color: #d1d1d1;
-}
+}*/
 
 
 
@@ -183,7 +189,7 @@ These are the elements of content
 /
 */
 .tableCell{
-    padding-top: 122px;
+    padding-top: 111px;
 
 }
 

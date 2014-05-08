@@ -9,6 +9,7 @@
  		<link rel="shortcut icon" href="file://localhost/Users/mauriciosanchezduque/Documents/codeMath/favico.ico" type="image/x-icon">
 	    <!--Style Sheet -->
 	    <link href="css/style.css" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
 	    <!--Libraries-->
 	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
@@ -19,7 +20,6 @@
 	</head>
 
 	<body>
-
 		<header class="header navbar-inverse navbar-fixed-top" >
 			<div class="container">				
 				<div class="navbar-header logo-container">
@@ -34,51 +34,68 @@
 				</div>
 				<nav class="collapse navbar-collapse menu-container bs-navbar-collapse" role="navigation" >
 					 <ul class="navbar-nav nav" id="menu">
-						<li class="menu-items" data-menuanchor="firstPage">  <a href="#firstPage">  what's codeMath? </a></li>
+						<li class="menu-items" data-menuanchor="firstPage">  <a href="#firstPage">  what's <span id="brand"> code Math </span> ? </a></li>
 						<li class="menu-items" data-menuanchor="secondPage"> <a href="#secondPage">  trajectory  </a> </li>
-						<li class="menu-items" data-menuanchor="thirdPage">  <a href="#thirdPage">  frameworkExample </a> </li>
+						<li class="menu-items" data-menuanchor="thirdPage">  <a href="#thirdPage">  framework </a> </li>
 						<li class="menu-items" data-menuanchor="fourthPage"> <a href="#fourthPage">  contact </a> </li>
 					</ul>
 				</nav>
 			</div>			
 		</header>
+		<!-- This is for fullpage.js -->
+		<div class="" id="fullpage" style="height: 100%; position: relative; top: 0px;" >
+			<!-- In case I want to have a welcome landing page-->
+			<section class="section active" id="what-code-math" data-anchor="secondPage">
 
-		<div class="container" id="fullpage" style="height: 100%; position: relative; top: 0px;" >
-			<!-- First Section -->
-					
-			<section class="section active" id="what-code-math" data-anchor="firstPage">
-				<h2 class="what-title"> what's codeMath? </h2>
-				<article class="what-content">
+			</section>
+			<!-- First Section -->					
+			<section class="section " id="what-code-math" data-anchor="firstPage">
+				<article class="what-content container">
+					<h2 class="page-title"> what's codeMath? </h2>
 					<img width="300px" height="300px" id="what-code-image"> </img>
 					<p id="codeMath-definition" class="page-text">
-							codeMath is a project that seeks to explore new ways of teaching Math through Code. It seeks to find new ways of approaching two topics that throughout time have been proved to be hard when learned.
+							codeMath is an initiative that seeks to explore new ways of teaching Math through Code. It seeks to find new ways of approaching two topics that throughout time have been proved to be hard when learned.
 					</p>
 				</article>
 			</section>
-
-			<!-- <section id="trajectory-top">
-			<section> -->
+			<!-- Second Section -->	
 			<section class="section" id="trajectory" data-anchor="secondPage">
-				<h2> trajectory </h2>
+				<article class="what-content container">
+					<h2 class="page-title"> trajectory </h2>
+					<img width="300px" height="300px" id="what-code-image"> </img>
+					<p id="codeMath-definition" class="page-text">
+							<!-- codeMath is a project that seeks to explore new ways of teaching Math through Code. It seeks to find new ways of approaching two topics that throughout time have been proved to be hard when learned. -->
+							This is a long term project with different stages. The most immediate step is to show the potential and establish relationships between Code and Math. This will serve as a precedent to start building curriculum as a new way to teach.
+					</p>
+				</article>	
 			</section>
 
-			<!-- <section id="code-examples-top">
-			<section> -->
+			<!-- Third Section -->	
 			<section class="section" id="code-examples" data-anchor="thirdPage">
-				<h2> frameworkExamples </h2>
+				<div class="slide">
+					<article class="what-content container">
+						<h2 class="page-title"> framework </h2>
+					</article>
+				</div>
+			    <div class="slide"> Slide 2 </div>
+			    <div class="slide"> Slide 3 </div>
+			    <div class="slide"> Slide 4 </div>
+			    <div class="controlArrow prev"></div>
+			    <div class="controlArrow next"></div>
+				
 			</section>
 
 			<!-- <section id="contact-top">
 			<section> -->
 			<section class="section" id="contact" data-anchor="fourthPage">
-				<h2> contact </h2>
+				<article class="what-content container">
+					<h2 class="page-title"> contact </h2>
+				</article>
 			</section>
 
 		</div>
-
-		<footer class="container">
-
-		</foooter>
+		<!--fullpage.js ends here -->
+		
 		<script src="js/main.js"></script>
 
 
