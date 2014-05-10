@@ -74,11 +74,11 @@ rmove2Equations = function (dx, dy) {
 };
 //These 3 funtions pass strings to our HTML updating the model view
 updateRectangleOneEquations = function () {
-	var rectangleOneString = "var x = " + rectangleEquations.node.attributes[2].nodeValue;
+	var rectangleOneString = "x = " + rectangleEquations.node.attributes[2].nodeValue;
 	$rectangleOneTextEquations.text(rectangleOneString);
 }
 updateRectangleTwoEquations = function () {
-	var rectangleTwoString = "var y = " + rectangle2Equations.node.attributes[2].nodeValue;
+	var rectangleTwoString = "y = " + rectangle2Equations.node.attributes[2].nodeValue;
 	$rectangleTwoTextEquations.text(rectangleTwoString);
 }
 updateRectangleResult = function () {
@@ -88,7 +88,6 @@ updateRectangleResult = function () {
 //
 // 
 //
-//This is a generic function. It can be used on exercice 4 as well. 
 function drawCartisianPlane() {
 	// console.log(height_two);
 	var line = cartesianPaper.path("M-200," + 0 + " L" + 200 + "," + 0).attr({
@@ -100,6 +99,71 @@ function drawCartisianPlane() {
 		"stroke": "#EBE9E9"
 	});
 	console.log(line2);
+}
+// 4. Cartesian Plane II
+//
+// 
+//
+function drawCartisian2Plane() {
+	// console.log(height_two);
+	var line = cartesian2Paper.path("M-200," + 0 + " L" + 200 + "," + 0).attr({
+		"stroke-width": "3",
+		"stroke": "#EBE9E9"
+	});
+	var line2 = cartesian2Paper.path("M" + 0 + ",-200 L" + 0 + "," + 200).attr({
+		"stroke-width": "3",
+		"stroke": "#EBE9E9"
+	});
+	console.log(line2);
+}
+
+function drawCartesian2Circle() {
+	newCircleCartesian2 = cartesian2Paper.circle(0, 0, 10).attr({
+		fill: "blue",
+		stroke: "2px"
+	});
+}
+
+function drawCartesian2Axes() {
+	//This draws vertical lines
+	for (var i = -10; i < 10; i++) {
+		// var line = canvas.path(["M", (25 * i), 0, "L", (25 * i), 500]);
+		var line = cartesian2Paper.path("M" + (20 * i) + "," + -200 + " L" + (20 * i) + "," + 200).attr({
+			"stroke": "#EBE9E9"
+		});
+	}
+	//This draws horizontal lines
+	for (var i = -10; i < 10; i++) {
+		// var line = canvas.path(["M", (25 * i), 0, "L", (25 * i), 500]);
+		var line2 = cartesian2Paper.path("M" + -200 + "," + (20 * i) + " L" + 200 + "," + (20 * i)).attr({
+			"stroke": "#EBE9E9"
+		});
+	}
+}
+updateCartesian2CirclePos = function (posX, posY) {
+	for (var i = -200; i <= 200; i += 20) {
+		for (var j = -200; j <= 200; j += 20) {
+			if (posX > i && posX < i + 20) {
+				if (posY > j && posY < j + 20) {
+					newCircleCartesian2.node.cx.baseVal.value = i;
+					newCircleCartesian2.node.cy.baseVal.value = j;
+					//Here we pass the values of the coordinate system in the visual model.
+					//We multiply by -1 so that we can invert it
+					cartesian2CirclePos[0] = (i / 20);
+					cartesian2CirclePos[1] = (j / 20) * -1;
+				}
+			}
+		}
+	}
+}
+updateCartesian2ModelView = function () {
+	var $posXHandler = $("#cartesian2-posx");
+	var $posYHandler = $("#cartesian2-posy");
+	var posXHtmlString = "x = " + parseInt(cartesian2CirclePos[0]);
+	var posYHtmlString = "y = " + parseInt(cartesian2CirclePos[1]);
+	$posXHandler.text(posXHtmlString);
+	$posYHandler.text(posYHtmlString);
+	console.log("I'm passing a string");
 }
 //
 //

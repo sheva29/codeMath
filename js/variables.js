@@ -3,6 +3,8 @@
 //
 // 1.Variables
 var variablesPaper = Raphael("variables-canvas", 400, 400);
+//Let's add an id to our canvas
+variablesPaper.canvas.id = "variables-paper";
 var variablesSquare = variablesPaper.rect(0, 0, 160, 160).attr({
 	fill: "#835ea7",
 	stroke: "none"
@@ -48,4 +50,22 @@ var $rectangleOneTextEquations = $("#equations-rectangle-1"),
 //
 // 3. Cartesian Plane
 var cartesianPaper = Raphael("cartesian-canvas", 400, 400);
+//Let's give out canvas an id
+cartesianPaper.canvas.id = "cartesian-paper";
+//We create a handler for the id we just assigned
 var $cartesianPaperHandler = $("#cartesian-paper");
+//
+//
+// 4. Cartesian Plane II
+var cartesian2Paper = Raphael("cartesian2-canvas", 400, 400);
+//Let's give out canvas an id
+cartesian2Paper.canvas.id = "cartesian2-paper";
+// var $cartesian2Container = $("#cartesian2-container");
+var $cartesian2PaperHandler = $("#cartesian2-paper");
+//We create a circle
+var newCircleCartesian2;
+//We store the X and Y position on this array
+var cartesian2CirclePos = [];
+//
+//
+//

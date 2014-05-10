@@ -326,6 +326,34 @@ FrameWork elements
 
 }
 
+/*------- 4. Cartesian Plane  -------*/
+
+#cartesian2-text{
+    font-size: 24px;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0px 0px 0px 60px;
+    float: left;
+    padding-top: 30px;
+}
+
+#cartesian2-definition{
+    margin-top: 15px;
+    width: 400px;
+    margin-bottom: 40px;
+}
+
+#cartesian2-container{
+    overflow: hidden;
+    margin-left: 80px;
+    float: left;
+    min-width: 200px;
+}
+
+#cartesian2-canvas-text{
+
+}
+
 /*This is to overwrite the classes that fullpage.js adds.
 /
 */
