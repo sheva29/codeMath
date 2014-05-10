@@ -15,6 +15,7 @@
 	    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+		<script language="JavaScript" type="text/javascript" src="js/raphael-min.js"></script>
 
 
 	</head>
@@ -80,18 +81,27 @@
 						<img id="framework-image" src="images/framework_image.svg"> </img>
 					</article>
 				</div>
+				<!-- 1. VARIABLES-->	
 			    <div class="slide container"> 
 			    	<article class="article-container container">
-						<h2 class="page-title"> 1. Variables </h2>
-						<img id="framework-image" src="images/framework_image.svg"> </img>
-						<p id="variables-text"  class="page-text">
-							A symbol for a number or an element such a string of text that stores its value.
-						</p>
-						<ul id="variables-code">
-							<li class="generic-code"> x = 5 </li>
-							<li class="generic-code"> something = 20 </li>
-							<li class="generic-code"> something + x = 25 </li>
-						</ul>						
+						<h2 class="page-title"> 1. Variables </h2>	
+						<div id="variables-text">					
+							<p class="page-text" id="variables-definition">
+								A symbol for a number or an element such a string of text that stores its value.
+							</p>
+							<ul id="variables-code">
+								<code class="generic-code"> x = 5 </code><br>
+								<code class="generic-code"> something = 20 </code><br>
+								<code class="generic-code"> something + x = 25 </code>
+							</ul>
+						</div>
+						<!--Here we insert our square-->
+						<div class="canvas-container">
+							<p id="variables-canvas-text">
+								X = 80
+							</p>	
+							<div id="variables-canvas" > </div>
+						</div>
 					</article>
 			    </div>
 			    <div class="slide"> Slide 3 </div>
