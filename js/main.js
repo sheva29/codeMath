@@ -26,4 +26,14 @@ $(document).ready(function () {
 	//Second rectangle
 	rectangle2HandlerEquations.drag(rmove2Equations, rstart2Equations);
 	rectangle2HandlerEquations.box = rectangle2Equations;
+	//
+	//
+	//
+	//------- 3.Cartesian Plane - Functions and Manipulation
+	//Let's give out canvas an id
+	cartesianPaper.canvas.id = "cartesian-paper";
+	//We shift our coordinate system to the middle of the screen
+	cartesianPaper.setViewBox(-200, -200, 400, 400);
+	//We draw our two axes
+	drawCartisianPlane();
 });

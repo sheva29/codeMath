@@ -84,5 +84,22 @@ updateRectangleTwoEquations = function () {
 updateRectangleResult = function () {
 	var rectangleThreeStringEquations = "x + y = " + someVariable;
 }
+// 3. Cartesian Plane
+//
+// 
+//
+//This is a generic function. It can be used on exercice 4 as well. 
+function drawCartisianPlane() {
+	// console.log(height_two);
+	var line = cartesianPaper.path("M-200," + 0 + " L" + 200 + "," + 0).attr({
+		"stroke-width": "3",
+		"stroke": "#EBE9E9"
+	});
+	var line2 = cartesianPaper.path("M" + 0 + ",-200 L" + 0 + "," + 200).attr({
+		"stroke-width": "3",
+		"stroke": "#EBE9E9"
+	});
+	console.log(line2);
+}
 //
 //

@@ -44,3 +44,8 @@ var rectangle2HandlerEquations = equationsPaper.rect(70, 0, 10, 100).attr({
 // Some handlers
 var $rectangleOneTextEquations = $("#equations-rectangle-1"),
 	$rectangleTwoTextEquations = $("#equations-rectangle-2");
+//
+//
+// 3. Cartesian Plane
+var cartesianPaper = Raphael("cartesian-canvas", 400, 400);
+var $cartesianPaperHandler = $("#cartesian-paper");
