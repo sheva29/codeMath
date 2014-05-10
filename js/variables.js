@@ -18,28 +18,29 @@ console.log(variablesSquareSizer);
 //
 //
 // 2. Variables and Equations
-var equationsPaper = Raphael("equations-canvas", 500, 500);
+var equationsPaper = Raphael("equations-canvas", 400, 200);
 var equationsRectPosX = 0,
 	equationsRectPosY = 0,
 	equationsRectWidth = 50,
 	equationsRectHeight = 100,
 	equationsRect2PosX = equationsRectPosX + equationsRectWidth,
-	equationsRect2PosY = rectPosY,
+	equationsRect2PosY = equationsRectPosY,
 	equationsRect2Width = 30,
-	equationsRect2Height = 100;
+	equationsRect2Height = 100,
+	equationsRect2HandlerNewX = 70;
 // Raphael elements
-var rectangle = canvas.rect(equationsRectPosX, equationsRectPosY, equationsRectWidth, equationsRectHeight).attr({
+var rectangleEquations = equationsPaper.rect(equationsRectPosX, equationsRectPosY, equationsRectWidth, equationsRectHeight).attr({
 	fill: "red"
 });
-var rectangleHandler = canvas.rect(40, 0, 10, 100).attr({
+var rectangleHandlerEquations = equationsPaper.rect(40, 0, 10, 100).attr({
 	fill: "hsb(.8, .5, .5)"
 });
-var rectangle2 = canvas.rect(equationsRect2PosX, equationsRect2PosY, equationsRect2Width, equationsRect2Height).attr({
+var rectangle2Equations = equationsPaper.rect(equationsRect2PosX, equationsRect2PosY, equationsRect2Width, equationsRect2Height).attr({
 	fill: "blue"
 });
-var rectangle2Handler = canvas.rect(70, 0, 10, 100).attr({
+var rectangle2HandlerEquations = equationsPaper.rect(70, 0, 10, 100).attr({
 	fill: "green"
 });
-var equationsRect2HandlerNewX = 70;
-var $rectangleOneText = $("#square-1"),
-	$rectangleTwoText = $("#square-2");
+// Some handlers
+var $rectangleOneTextEquations = $("#equations-rectangle-1"),
+	$rectangleTwoTextEquations = $("#equations-rectangle-2");

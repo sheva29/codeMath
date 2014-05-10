@@ -223,6 +223,13 @@ FrameWork elements
     height: 400px;
     margin-left: 10px;
 }
+
+.canvas-container{
+    overflow: hidden;
+    margin-left: 100px;
+    float: left;
+    min-width: 400px;
+}
 /*------- 1. Variables -------*/
 
 #variables-text{
@@ -247,12 +254,6 @@ FrameWork elements
 .generic-code{
    color: #EBE9E9;
    font-size: 18px;    
-}
-.canvas-container{
-    overflow: hidden;
-    margin-left: 100px;
-    float: left;
-    min-width: 400px;
 }
 
 #variables-canvas-text{
@@ -284,6 +285,17 @@ FrameWork elements
     margin-top: 15px;
     width: 400px;
     margin-bottom: 40px;
+}
+
+#equations-container{
+    overflow: hidden;
+    margin-left: 80px;
+    float: left;
+    min-width: 200px;
+}
+
+#equations-canvas-text{
+
 }
 
 /*This is to overwrite the classes that fullpage.js adds.
