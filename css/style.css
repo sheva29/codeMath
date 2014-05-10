@@ -269,6 +269,22 @@ FrameWork elements
     overflow: auto;
 }
 
+/*------- 2. Variables & Equations  -------*/
+
+#equations-text{
+    font-size: 24px;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0px 0px 0px 60px;
+    float: left;
+    padding-top: 30px;
+}
+
+#equations-definition{
+    margin-top: 15px;
+    width: 400px;
+    margin-bottom: 40px;
+}
 
 /*This is to overwrite the classes that fullpage.js adds.
 /
