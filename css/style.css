@@ -354,6 +354,34 @@ FrameWork elements
 
 }
 
+/*------- 5. Cartesian Plane In The Commputer -------*/
+
+#comp-text{
+    font-size: 24px;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0px 0px 0px 60px;
+    float: left;
+    padding-top: 30px;
+}
+
+#comp-definition{
+    margin-top: 15px;
+    width: 400px;
+    margin-bottom: 40px;
+}
+
+#comp-container{
+    overflow: hidden;
+    margin-left: 80px;
+    float: left;
+    min-width: 200px;
+}
+
+#comp-canvas-text{
+
+}
+
 /*This is to overwrite the classes that fullpage.js adds.
 /
 */

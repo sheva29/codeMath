@@ -68,4 +68,14 @@ var newCircleCartesian2;
 var cartesian2CirclePos = [];
 //
 //
+// 5. Cartesian Plane on the screen
+var compPaper = Raphael("comp-canvas", 400, 400);
+compPaper.canvas.id = "comp-paper";
+var $compPaperHandler = $("#comp-paper");
+//We create a circle
+var newCircleComp;
+//We store the X and Y position on this array
+var compCirclePos = [];
+//
+//
 //

@@ -52,4 +52,17 @@ $(document).ready(function () {
 		updateCartesian2ModelView();
 		console.log("I'm being clicked");
 	});
+	//
+	//
+	//
+	//------- 5. Cartesian Plane on the Screen - Functions and Manipulation
+	//We draw our circle
+	drawCompCircle();
+	//We draw the axes on the canvas
+	drawCompLines();
+	//When the mouse move in the canvas, it updates the position of the circle
+	$compPaperHandler.mousemove(function (e) {
+		updateCompCirclePos(e.offsetX, e.offsetY);
+		updateCompModelView();
+	})
 });

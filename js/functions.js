@@ -165,5 +165,52 @@ updateCartesian2ModelView = function () {
 	$posYHandler.text(posYHtmlString);
 	console.log("I'm passing a string");
 }
+// 5. Cartesian Plane on the Computer
+//
+// 
+//
+function drawCompCircle() {
+	newCircleComp = compPaper.circle(10, 10, 9).attr({
+		fill: "blue",
+		opacity: .8
+	});
+}
+
+function drawCompLines() {
+	for (var i = 0; i <= 20; i++) {
+		var line = compPaper.path("M" + (20 * i) + ",0" + " L" + (20 * i) + ",400").attr({
+			"stroke": "#EBE9E9"
+		});
+	}
+	for (var i = 0; i <= 20; i++) {
+		var line2 = compPaper.path("M" + "0," + (20 * i) + " L" + "400," + (20 * i)).attr({
+			"stroke": "#EBE9E9"
+		});
+	}
+}
+
+function updateCompCirclePos(posX, posY) {
+	for (var i = 1; i <= 400; i += 20) {
+		for (var j = 1; j <= 400; j += 20) {
+			if (posX > i && posX < i + 20) {
+				if (posY > j && posY < j + 20) {
+					newCircleComp.node.cx.baseVal.value = i + 9;
+					newCircleComp.node.cy.baseVal.value = j + 9;
+					compCirclePos[0] = (i / 20) + 1;
+					compCirclePos[1] = (j / 20) + 1;
+				}
+			}
+		}
+	}
+}
+updateCompModelView = function () {
+	//This is where the position in the canvas will be storing our
+	var $posXHandler = $('#comp-posx');
+	var $posYHandler = $('#comp-posy');
+	var posXHtmlString = 'position x = ' + parseInt(compCirclePos[0]);
+	var posYHtmlString = 'postion y = ' + parseInt(compCirclePos[1]);
+	$posXHandler.text(posXHtmlString);
+	$posYHandler.text(posYHtmlString);
+}
 //
 //
