@@ -400,10 +400,11 @@ var startCircleColor = function () {
 			cy: this.oy + dy
 		});
 		this.sizer.attr({
-			cx: this.sizer.ox + ox,
+			cx: this.sizer.ox + dx,
 			cy: this.sizer.oy + dy
 		});
-		newCircleColorElementPos = newCircleColorElement.node.attributes[1].nodeValue;
+		newCircleColorElementPosX = newCircleColorElement.node.attributes[0].nodeValue;
+		newCircleColorElementPosY = newCircleColorElement.node.attributes[1].nodeValue;
 		updateCircleColorModelView();
 	},
 	upCircleColor = function () {
@@ -417,11 +418,11 @@ var startCircleColor = function () {
 	};
 updateCircleColorModelView = function () {
 	var $circleColorPosXHandler = $("#circle-color-xpos");
-	var posXString = " var y = " + parseInt(newCircleYElementPos) + ";";
-	$circleColorPosHandler.text(posXString);
+	var posXString = " var y = " + parseInt(newCircleColorElementPosX) + ";";
+	$circleColorPosXHandler.text(posXString);
 	var $circleColorPosYHandler = $("#circle-color-ypos");
-	var posYString = " var y = " + parseInt(newCircleYElementPos) + ";";
-	$circleYPosHandler.text(posYString);
+	var posYString = " var y = " + parseInt(newCircleColorElementPosY) + ";";
+	$circleColorPosYHandler.text(posYString);
 }
 // 12. Cartesian Plane on the Computer
 //

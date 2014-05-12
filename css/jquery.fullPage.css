@@ -66,13 +66,15 @@ html, body {
 .controlArrow.prev {
     left: 15px;
     width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+    /*border-width: 38.5px 34px 38.5px 0;*/
+    /*border-color: transparent #fff transparent transparent;*/
 }
 .controlArrow.next {
     right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;
+    /*overflow: auto;*/
+    /*border-width: 38.5px 0 38.5px 34px;*/
+    /*border-color: transparent transparent transparent #fff;*/
+    margin-right: 60px
 }
 .scrollable {
     overflow: scroll;
