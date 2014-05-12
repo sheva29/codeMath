@@ -98,7 +98,7 @@ function drawCartisianPlane() {
 		"stroke-width": "3",
 		"stroke": "#EBE9E9"
 	});
-	console.log(line2);
+	// console.log(line2);
 }
 // 4. Cartesian Plane II
 //
@@ -114,7 +114,7 @@ function drawCartisian2Plane() {
 		"stroke-width": "3",
 		"stroke": "#EBE9E9"
 	});
-	console.log(line2);
+	// console.log(line2);
 }
 
 function drawCartesian2Circle() {
@@ -163,7 +163,7 @@ updateCartesian2ModelView = function () {
 	var posYHtmlString = "y = " + parseInt(cartesian2CirclePos[1]);
 	$posXHandler.text(posXHtmlString);
 	$posYHandler.text(posYHtmlString);
-	console.log("I'm passing a string");
+	// console.log("I'm passing a string");
 }
 // 5. Cartesian Plane on the Computer
 //
@@ -211,6 +211,45 @@ updateCompModelView = function () {
 	var posYHtmlString = 'postion y = ' + parseInt(compCirclePos[1]);
 	$posXHandler.text(posXHtmlString);
 	$posYHandler.text(posYHtmlString);
+}
+// 5. Cartesian Plane on the Computer
+//
+// 
+//
+drawCircleCircle = function () {
+	newCircleElement = circlePaper.circle(200, 200, 40).attr({
+		fill: "blue",
+		opacity: .8
+	});
+	// console.log(newCircleElement);
+}
+drawCircleHandler = function () {
+	newCircleElementHandler = circlePaper.circle(225, 225, 10).attr({
+		fill: "lightblue"
+	});
+}
+rstartCircle = function () {
+	// storing original coordinates
+	this.ox = this.attr("cx");
+	this.oy = this.attr("cy");
+	this.big.or = this.big.attr("r");
+},
+rmoveCircle = function (dx, dy) {
+	// move will be called with dx and dy
+	this.attr({
+		cx: this.ox + dy,
+		cy: this.oy + dy
+	});
+	this.big.attr({
+		r: this.big.or + (dy < 0 ? -1 : 1) * Math.sqrt(2 * dy * dy)
+	});
+	circleRadiusVal = newCircleElement.node.attributes[2].nodeValue;
+	updateCircleModelView();
+};
+updateCircleModelView = function () {
+	var $circleRadiusHandler = $("#circle-radius");
+	var radiusString = " var radius = " + parseInt(circleRadiusVal) + ";";
+	$circleRadiusHandler.text(radiusString);
 }
 //
 //

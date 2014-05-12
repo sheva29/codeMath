@@ -19,9 +19,11 @@ $(document).ready(function () {
 	//
 	//------- 2.Variables & Equations - Functions and Manipulation
 	//First rectangle
+	rectangleEquations.sizer = rectangleHandlerEquations;
 	rectangleHandlerEquations.drag(rmoveEquations, rstartEquations);
 	rectangleHandlerEquations.box = rectangleEquations;
 	//Second rectangle
+	rectangle2Equations.sizer = rectangle2HandlerEquations;
 	rectangle2HandlerEquations.drag(rmove2Equations, rstart2Equations);
 	rectangle2HandlerEquations.box = rectangle2Equations;
 	//
@@ -50,7 +52,7 @@ $(document).ready(function () {
 		var newMousePosY = e.offsetY - 200;
 		updateCartesian2CirclePos(newMousePosX, newMousePosY);
 		updateCartesian2ModelView();
-		console.log("I'm being clicked");
+		// console.log("I'm being clicked");
 	});
 	//
 	//
@@ -64,5 +66,13 @@ $(document).ready(function () {
 	$compPaperHandler.mousemove(function (e) {
 		updateCompCirclePos(e.offsetX, e.offsetY);
 		updateCompModelView();
-	})
+	});
+	//
+	//
+	//
+	//------- 6. Circle on the Screen - Functions and Manipulation
+	drawCircleCircle();
+	drawCircleHandler();
+	newCircleElementHandler.drag(rmoveCircle, rstartCircle);
+	newCircleElementHandler.big = newCircleElement;
 });

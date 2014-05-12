@@ -78,4 +78,14 @@ var newCircleComp;
 var compCirclePos = [];
 //
 //
+// 6. Circle on the Canvas
+var circlePaper = Raphael("circle-canvas", 400, 400);
+circlePaper.canvas.id = "circle-paper";
+var $circlePaperHandler = $("#circle-paper");
+var newCircleElement,
+	newCircleElementHandler;
+var circleRadiusVal;
+console.log(newCircleElement);
+//
+//
 //

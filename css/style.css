@@ -381,6 +381,37 @@ FrameWork elements
 #comp-canvas-text{
 
 }
+/*------- 5. Circle on the Cartesian Plane -------*/
+
+#circle-text{
+    font-size: 24px;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0px 0px 0px 60px;
+    float: left;
+    padding-top: 30px;
+}
+
+#circle-definition{
+    margin-top: 15px;
+    width: 400px;
+    margin-bottom: 40px;
+}
+
+#circle-container{
+    overflow: hidden;
+    margin-left: 80px;
+    float: left;
+    min-width: 200px;
+}
+
+#circle-canvas-text{
+
+}
+
+#circle-paper{
+    background-color: white;
+}
 
 /*This is to overwrite the classes that fullpage.js adds.
 /
