@@ -41,16 +41,20 @@ var equationsRectPosX = 0,
 	equationsRect2HandlerNewX = 70;
 // Raphael elements
 var rectangleEquations = equationsPaper.rect(equationsRectPosX, equationsRectPosY, equationsRectWidth, equationsRectHeight).attr({
-	fill: "red"
+	fill: "#bc5b7b",
+	stroke: "none"
 });
 var rectangleHandlerEquations = equationsPaper.rect(40, 0, 10, 100).attr({
-	fill: "hsb(.8, .5, .5)"
+	fill: "#bc5b7b",
+	stroke: "none"
 });
 var rectangle2Equations = equationsPaper.rect(equationsRect2PosX, equationsRect2PosY, equationsRect2Width, equationsRect2Height).attr({
-	fill: "blue"
+	fill: "#5b98ba",
+	stroke: "none"
 });
 var rectangle2HandlerEquations = equationsPaper.rect(70, 0, 10, 100).attr({
-	fill: "green"
+	fill: "#5b98ba",
+	stroke: "none"
 });
 // Some handlers
 var $rectangleOneTextEquations = $("#equations-rectangle-1"),

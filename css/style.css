@@ -93,6 +93,10 @@ h1, h2{
 h2{
     color: #EBE9E9;
 }
+
+ul{
+    list-style-type: none;
+}
 /*
 /
 /
@@ -100,7 +104,7 @@ These are the elements for navigation bar
 /
 */
 #logo{
-    margin: 15px 60px 15px 60px;
+    margin: 8px 60px 8px 60px;
 }
 
 .logo-container{
@@ -110,7 +114,7 @@ These are the elements for navigation bar
 #menu{
 
     text-transform:uppercase;
-    font-family: 'Gotham-Round-Bold', 'sans-serif'; 
+    font-family: 'Gotham-Round-Light', 'sans-serif'; 
 }
 
 /*.menu-container{
@@ -121,7 +125,7 @@ These are the elements for navigation bar
 .menu-items{
     font-size: 16px;
     margin: 0 10px;
-    margin-top: 30px;
+    margin-top: 12px;
     float: left;
 }
 
@@ -142,6 +146,13 @@ These are the elements of content
     /*background-color: blue;*/
     width: 100%;
     height: 100%;
+    background-image: url('../images/codemath_intro_blured.jpg');
+    /*will get back to this*/
+    /*-webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);*/
 }
 
 #trajectory{    
@@ -164,7 +175,7 @@ These are the elements of content
 
 #what-code-image{
     float:left;
-    margin: 45px auto 20px 80px;
+    margin: 120px auto 20px 80px;
 }
 
 #codeMath-definition{
@@ -172,7 +183,7 @@ These are the elements of content
     margin: 90px auto 20px 50px;
     width: 500px;
     height: 300px;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .article-container{
@@ -197,7 +208,14 @@ Trajectory elements
 */
 
 #trajectory-text{
-    margin: 50px 0px 0px 60px;
+    float: left;
+    margin: 90px auto 20px 50px;
+    width: 500px;
+    height: 300px;
+    font-size: 16px;
+}
+#rajectory-image{
+    margin-left: 20px;
 }
 
 /*
@@ -209,7 +227,7 @@ FrameWork elements
 */
 
 #framework-text{
-    font-size: 24px;
+    font-size: 16px;
     max-width: 500px;
     min-width: 300px;
     margin: 50px 0px 0px 60px;
@@ -224,16 +242,16 @@ FrameWork elements
     margin-left: 10px;
 }
 
-.canvas-container{
+/*.canvas-container{
     overflow: hidden;
     margin-left: 100px;
     float: left;
     min-width: 400px;
-}
+}*/
 /*------- 1. Variables -------*/
 
 #variables-text{
-    font-size: 24px;
+   font-size: 16px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -243,7 +261,7 @@ FrameWork elements
 
 #variables-definition{
     margin-top: 15px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 40px;
 }
 
@@ -253,11 +271,12 @@ FrameWork elements
 
 .generic-code{
    color: #EBE9E9;
-   font-size: 18px;    
+   font-size: 16px;
+   list-style-type: none;    
 }
 
 #variables-canvas-text{
-    font-size: 24px;
+    font-size: 16px;
 }
 
 #variables-canvas{
@@ -265,15 +284,15 @@ FrameWork elements
     min-width: 400px;
     min-height: 400px;
     max-width: 200px;  
-    /*position: absolute;*/
-    /*width: 100%;*/
+    margin-left: 30px;
     overflow: auto;
+    float: left;
 }
 
 /*------- 2. Variables & Equations  -------*/
 
 #equations-text{
-    font-size: 24px;
+    font-size: 16px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -283,25 +302,30 @@ FrameWork elements
 
 #equations-definition{
     margin-top: 15px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 40px;
 }
 
 #equations-container{
     overflow: hidden;
-    margin-left: 80px;
     float: left;
-    min-width: 200px;
+    margin-top: 25px;
+    margin-left: 50px;
 }
 
 #equations-canvas-text{
 
 }
 
+#equations-canvas{
+    float: left;
+   /* margin: 400px;*/
+}
+
 /*------- 3. Cartesian Plane  -------*/
 
 #cartesian-text{
-    font-size: 24px;
+   font-size: 16px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -311,7 +335,7 @@ FrameWork elements
 
 #cartesian-definition{
     margin-top: 15px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 40px;
 }
 
@@ -322,6 +346,10 @@ FrameWork elements
     min-width: 200px;
 }
 
+#cartesian-canvas{
+    float: left;
+}
+
 #cartesian-canvas-text{
 
 }
@@ -329,7 +357,7 @@ FrameWork elements
 /*------- 4. Cartesian Plane  -------*/
 
 #cartesian2-text{
-    font-size: 24px;
+  font-size: 16px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -339,25 +367,29 @@ FrameWork elements
 
 #cartesian2-definition{
     margin-top: 15px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 40px;
 }
 
 #cartesian2-container{
     overflow: hidden;
-    margin-left: 80px;
+    margin-left: 20px;
     float: left;
     min-width: 200px;
 }
 
-#cartesian2-canvas-text{
+#cartesian2-canvas{
+    float: left;
+}
 
+#cartesian2-canvas-text{
+    margin-left: 
 }
 
 /*------- 5. Cartesian Plane In The Commputer -------*/
 
 #comp-text{
-    font-size: 24px;
+    font-size: 16px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -367,15 +399,19 @@ FrameWork elements
 
 #comp-definition{
     margin-top: 15px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 40px;
 }
 
 #comp-container{
     overflow: hidden;
-    margin-left: 80px;
+    margin-left: 20px;
     float: left;
     min-width: 200px;
+}
+
+#comp-canvas{
+    float: left;
 }
 
 #comp-canvas-text{
@@ -384,7 +420,7 @@ FrameWork elements
 /*------- 6. Circle on the Cartesian Plane -------*/
 
 #circle-text{
-    font-size: 24px;
+    font-size: 16px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -394,15 +430,19 @@ FrameWork elements
 
 #circle-definition{
     margin-top: 15px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 40px;
 }
 
 #circle-container{
     overflow: hidden;
-    margin-left: 80px;
+    margin-left: 20px;
     float: left;
     min-width: 200px;
+}
+
+#circle-canvas{
+    float:left;
 }
 
 #circle-canvas-text{
@@ -416,7 +456,7 @@ FrameWork elements
 /*------- 7. Circle on the X Axis -------*/
 
 #circlex-text{
-    font-size: 24px;
+    font-size: 16px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -426,15 +466,19 @@ FrameWork elements
 
 #circlex-definition{
     margin-top: 15px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 40px;
 }
 
 #circlex-container{
     overflow: hidden;
-    margin-left: 80px;
+    margin-left: 20px;
     float: left;
     min-width: 200px;
+}
+
+#circlex-canvas{
+    float:left;
 }
 
 #circlex-canvas-text{
@@ -448,7 +492,7 @@ FrameWork elements
 /*------- 8. Circle on the Y Axis -------*/
 
 #circley-text{
-    font-size: 24px;
+    font-size: 16px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -458,15 +502,19 @@ FrameWork elements
 
 #circley-definition{
     margin-top: 15px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 40px;
 }
 
 #circley-container{
     overflow: hidden;
-    margin-left: 80px;
+    margin-left: 20px;
     float: left;
     min-width: 200px;
+}
+
+#circley-canvas{
+    float: left;
 }
 
 #circley-canvas-text{
@@ -480,7 +528,7 @@ FrameWork elements
 /*------- 8. Circle on the Y Axis -------*/
 
 #circle-color-text{
-    font-size: 24px;
+    font-size: 16px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -490,15 +538,19 @@ FrameWork elements
 
 #circle-color-definition{
     margin-top: 15px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 40px;
 }
 
 #circle-color-container{
     overflow: hidden;
-    margin-left: 80px;
+    margin-left: 20px;
     float: left;
     min-width: 200px;
+}
+
+#circle-color-canvas{
+    float: left;
 }
 
 #circle-color-canvas-text{
@@ -509,10 +561,10 @@ FrameWork elements
     background-color: white;
 }
 
-/*------- 12. Drawing multiple elements on the screen -------*/
+/*------- 10. Drawing multiple elements on the screen -------*/
 
 #multiple-text{
-    font-size: 24px;
+    font-size: 16px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -522,15 +574,19 @@ FrameWork elements
 
 #multiple-definition{
     margin-top: 15px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 40px;
 }
 
 #multiple-container{
     overflow: hidden;
-    margin-left: 80px;
+    margin-left: 20px;
     float: left;
     min-width: 200px;
+}
+
+#multiple-canvas{
+    float:left;
 }
 
 #multiple-canvas-text{
@@ -559,7 +615,7 @@ FrameWork elements
     background-color: orange;
 }
 #picker-text{
-
+    font-size: 12px;
 
 }
 
@@ -601,17 +657,24 @@ FrameWork elements
 /
 */
 .tableCell{
-    padding-top: 111px;
+    padding-top: 77px;
 
 }
 
 .table{
-
     margin-bottom: 0px;
 }
 /*
 /
 */
+
+#code-box{
+    float:left;
+    width: 170px;
+    background-color: #96909e;
+    font-size: 12px;
+    padding-left: 8px;
+}
 
 
 

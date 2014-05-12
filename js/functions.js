@@ -74,15 +74,15 @@ rmove2Equations = function (dx, dy) {
 };
 //These 3 funtions pass strings to our HTML updating the model view
 updateRectangleOneEquations = function () {
-	var rectangleOneString = "x = " + rectangleEquations.node.attributes[2].nodeValue;
+	var rectangleOneString = "var x = " + rectangleEquations.node.attributes[2].nodeValue + ";";
 	$rectangleOneTextEquations.text(rectangleOneString);
 }
 updateRectangleTwoEquations = function () {
-	var rectangleTwoString = "y = " + rectangle2Equations.node.attributes[2].nodeValue;
+	var rectangleTwoString = "var y = " + rectangle2Equations.node.attributes[2].nodeValue + ";";
 	$rectangleTwoTextEquations.text(rectangleTwoString);
 }
 updateRectangleResult = function () {
-	var rectangleThreeStringEquations = "x + y = " + someVariable;
+	// var rectangleThreeStringEquations = "x + y = " + someVariable ";";
 }
 // 3. Cartesian Plane
 //
@@ -119,21 +119,21 @@ function drawCartisian2Plane() {
 
 function drawCartesian2Circle() {
 	newCircleCartesian2 = cartesian2Paper.circle(0, 0, 10).attr({
-		fill: "blue",
+		fill: "#5a8caa",
 		stroke: "2px"
 	});
 }
 
 function drawCartesian2Axes() {
 	//This draws vertical lines
-	for (var i = -10; i < 10; i++) {
+	for (var i = -10; i <= 10; i++) {
 		// var line = canvas.path(["M", (25 * i), 0, "L", (25 * i), 500]);
 		var line = cartesian2Paper.path("M" + (20 * i) + "," + -200 + " L" + (20 * i) + "," + 200).attr({
 			"stroke": "#EBE9E9"
 		});
 	}
 	//This draws horizontal lines
-	for (var i = -10; i < 10; i++) {
+	for (var i = -10; i <= 10; i++) {
 		// var line = canvas.path(["M", (25 * i), 0, "L", (25 * i), 500]);
 		var line2 = cartesian2Paper.path("M" + -200 + "," + (20 * i) + " L" + 200 + "," + (20 * i)).attr({
 			"stroke": "#EBE9E9"
@@ -159,8 +159,8 @@ updateCartesian2CirclePos = function (posX, posY) {
 updateCartesian2ModelView = function () {
 	var $posXHandler = $("#cartesian2-posx");
 	var $posYHandler = $("#cartesian2-posy");
-	var posXHtmlString = "x = " + parseInt(cartesian2CirclePos[0]);
-	var posYHtmlString = "y = " + parseInt(cartesian2CirclePos[1]);
+	var posXHtmlString = "var x = " + parseInt(cartesian2CirclePos[0]) + ";";
+	var posYHtmlString = "var y = " + parseInt(cartesian2CirclePos[1]) + ";";
 	$posXHandler.text(posXHtmlString);
 	$posYHandler.text(posYHtmlString);
 	// console.log("I'm passing a string");
@@ -171,7 +171,7 @@ updateCartesian2ModelView = function () {
 //
 function drawCompCircle() {
 	newCircleComp = compPaper.circle(10, 10, 9).attr({
-		fill: "blue",
+		fill: "#5a8caa",
 		opacity: .8
 	});
 }
@@ -207,8 +207,8 @@ updateCompModelView = function () {
 	//This is where the position in the canvas will be storing our
 	var $posXHandler = $('#comp-posx');
 	var $posYHandler = $('#comp-posy');
-	var posXHtmlString = 'position x = ' + parseInt(compCirclePos[0]);
-	var posYHtmlString = 'postion y = ' + parseInt(compCirclePos[1]);
+	var posXHtmlString = 'var x = ' + parseInt(compCirclePos[0]) + ";";
+	var posYHtmlString = 'var y = ' + parseInt(compCirclePos[1]) + ";";
 	$posXHandler.text(posXHtmlString);
 	$posYHandler.text(posYHtmlString);
 }
@@ -218,13 +218,14 @@ updateCompModelView = function () {
 //
 drawCircleCircle = function () {
 	newCircleElement = circlePaper.circle(200, 200, 40).attr({
-		fill: "blue",
-		opacity: .8
+		fill: "#5a8caa",
+		stroke: "none"
 	});
 }
 drawCircleHandler = function () {
 	newCircleElementHandler = circlePaper.circle(225, 225, 10).attr({
-		fill: "lightblue"
+		fill: "lightblue",
+		stroke: "none"
 	});
 }
 rstartCircle = function () {
@@ -256,8 +257,8 @@ updateCircleModelView = function () {
 //
 drawCircleX = function () {
 	newCircleXElement = circleXPaper.circle(200, 200, 40).attr({
-		fill: "blue",
-		opacity: .8
+		fill: "#5a8caa",
+		stroke: "none"
 	});
 }
 drawCircleXHandler = function () {
@@ -312,8 +313,8 @@ updateCircleXModelView = function () {
 //
 drawCircleY = function () {
 	newCircleYElement = circleYPaper.circle(200, 200, 40).attr({
-		fill: "blue",
-		opacity: .8
+		fill: "#5a8caa",
+		stroke: "none"
 	});
 }
 drawCircleYHandler = function () {
@@ -368,8 +369,8 @@ updateCircleYModelView = function () {
 //
 drawCircleColor = function () {
 	newCircleColorElement = circleColorPaper.circle(200, 200, 40).attr({
-		fill: "blue",
-		opacity: .8
+		fill: "#5a8caa",
+		stroke: "none"
 	});
 }
 drawCircleColorHandler = function () {
@@ -433,9 +434,8 @@ function makeMultipleCircles(mouseX, mouseY) {
 	var radius;
 	var fill;
 	var circle = multipleElementsPaper.circle(mouseX, mouseY, 50).attr({
-		fill: "#f0f0f0",
-		stroke: "none",
-		opacity: .5,
+		fill: "orange",
+		stroke: "none"
 	});
 	// We add an ID and a class to the circle
 	var ourCircle = $("circle").last();
@@ -446,8 +446,7 @@ function makeMultipleCircles(mouseX, mouseY) {
 	var handlerPos = [mouseX + 35, mouseY + 35];
 	var s = multipleElementsPaper.circle(handlerPos[0], handlerPos[1], 10).attr({
 		fill: "000000",
-		stroke: "none",
-		opacity: .5
+		stroke: "none"
 	});
 	//We add an id and a class to our little circle.
 	s.node.id = multipleSizerCounter;

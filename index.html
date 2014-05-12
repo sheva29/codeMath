@@ -31,7 +31,7 @@
 					 	<span class="icon-bar"></span>
 					 	
 					 </button>
-					 <a href="www.google.com"><img id="logo" width="100" height="81" src="images/logo2.svg"> </img></a>					
+					 <a href="www.google.com"><img id="logo" width="100" height="61" src="images/logo3.svg"> </img></a>					
 				</div>
 				<nav class="collapse navbar-collapse menu-container bs-navbar-collapse" role="navigation" >
 					 <ul class="navbar-nav nav" id="menu">
@@ -46,16 +46,16 @@
 		<!-- This is for fullpage.js -->
 		<div class="" id="fullpage" style="height: 100%; position: relative; top: 0px;" >
 			<!-- In case I want to have a welcome landing page-->
-			<section class="section active" id="what-code-math" data-anchor="secondPage">
+			<!-- <section class="section active" id="what-code-math" data-anchor="zeroPage"> -->
 
 			</section>
 			<!-- First Section - WHAT"S CODE MATH? -->					
-			<section class="section " id="what-code-math" data-anchor="firstPage">
+			<section class="section active" id="what-code-math" data-anchor="firstPage">
 				<article class="article-container container">
-					<h2 class="page-title"> what's codeMath? </h2>
-					<img width="300px" height="300px" id="what-code-image"> </img>
+					<h2 class="page-title"> </h2>
+					<img width="182px" height="150px" id="what-code-image" src="images/logo4_dropshadow.png"> </img>
 					<p id="codeMath-definition" class="page-text">
-							codeMath is an initiative that seeks to explore new ways of teaching Math through Code. It seeks to find new ways of approaching two topics that throughout time have been proved to be hard when learned.
+						codeMath is an initiative that seeks to explore new ways of teaching Math through Code. It seeks to find new approaches to two topics that throughout time have been proved to be hard when learned.
 					</p>
 				</article>
 			</section>
@@ -63,7 +63,7 @@
 			<section class="section" id="trajectory" data-anchor="secondPage">
 				<article class="article-container container">
 					<h2 class="page-title"> trajectory </h2>
-					<img width="300px" height="300px" id="trajectory-image"> </img>
+					<img width="352px" height="506px" id="trajectory-image" src="images/trajectory.svg"> </img>
 					<p id="trajectory-text" class="page-text">
 							This is a long term project with different stages. The most immediate step is to show the potential and establish relationships between Code and Math. This will serve as a precedent to start building curriculum as a new way to teach.
 					</p>
@@ -76,7 +76,7 @@
 					<article class="article-container container">
 						<h2 class="page-title"> framework </h2>
 						<p id="framework-text"  class="page-text">
-							The following examples showcase how Code Interacts with Math to show relationships and build upon a goal. 12 exercises that walk the student from Variables to graphing in the Cartisean Plane.
+							The following examples showcase how Code Interacts with Math to illustrate relationships and build upon a goal. 12 mine lessons that walk the student from Variables to graphing in the Cartisean Plane. Giving the opportunity to build knowledge from lessons to lessons.
 						</p>
 						<img id="framework-image" src="images/framework_image.svg"> </img>
 					</article>
@@ -87,20 +87,22 @@
 						<h2 class="page-title"> 1. Variables </h2>	
 						<div id="variables-text">					
 							<p class="page-text" id="variables-definition">
-								A symbol for a number or an element such a string of text that stores its value.
-							</p>
-							<ul id="variables-code">
-								<li><code class="generic-code"> x = 5 </code></li><br>
-								<li><code class="generic-code"> something = 20 </code></li><br>
-								<li><code class="generic-code"> something + x = 25 </code></li>
-							</ul>
+								A symbol for a number or an element such a string of text that stores its value. <br>	
+								 x = 5 <br>									something = 20 <br> 
+								 something + x = 25 <br>
+								 Let's store the the value of one side of the square ina variable X and see what happens when it gets resized. 
+							</p>						
 						</div>
 						<!--Here we insert our square-->
 						<div class="canvas-container">
-							<p id="variables-canvas-text">
-								X = 80
-							</p>	
+							
 							<div id="variables-canvas" > </div>
+							<code id="code-box">
+								<h4> Code Console </h4>
+								<p id="variables-canvas-text">
+									x = 80
+								</p>
+							</code>		
 						</div>
 					</article>
 			    </div>
@@ -110,17 +112,20 @@
 						<h2 class="page-title"> 2. Variables and equations </h2>	
 						<div id="equations-text">					
 							<p class="page-text" id="equations-definition">
-								Now that we have learned about variables. Let's see the same principle in an equation with two different variables. <br>
-								Each side of the squares has a variable assigned. As we change the sizes of the squares, the values in our variables change, affecting the result.
+								Now that we have learned about variables, let’s see the same principle in an equation with two different variables. <br> Each side of the square has a variable assigned. As we change the sizes of the squares, the values in our variables change, affecting the result.
 							</p>							
 						</div>
 						<!--Here we insert our two rectangles-->
-						<div class="canvas-container" id="equations-container">								
+						<div class="canvas-container" id="equations-container">	
 							<div id="equations-canvas" > </div>
-							<ul id="equations-canvas-text">
-								<li id="equations-rectangle-1">  x = 50; </li>
-								<li id="equations-rectangle-2">  y = 30; </li>
-								<li id="equations-result"> </li>
+							<code id="code-box">
+								<h4> Code Console </h4>
+								<ul id="equations-canvas-text">
+									<li id="equations-rectangle-1"> var x = 50; </li>
+									<li id="equations-rectangle-2">  var y = 30; </li>
+									<li id="equations-result"> </li>
+								</ul>
+							</code>								
 							</ul>
 						</div>
 					</article>		
@@ -132,17 +137,19 @@
 						<div id="cartesian-text">					
 							<p class="page-text" id="cartesian-definition">
 								Let's put aside our concepts of variables and equations which we will bring later and focus on the Cartesian plane.<br>
-								The Cartesian plane or Coordinate plane is a plane that has two axes, one vertical and one horizontal, X and Y respectively. Through the use of Cartesian coordinates we can postion elements on the plane.
+								The Cartesian plane or Coordinate plane is a canvas that has two axes, one vertical and one horizontal, X and Y respectively. Through the use of Cartesian coordinates we can postion elements on the canvas.
 							</p>							
 						</div>
 						<!--Here we insert our two rectangles-->
 						<div class="canvas-container" id="cartesian-container">								
 							<div id="cartesian-canvas" > </div>
-							<p id="cartesian-canvas-text">
-								<li id="cartesian-rectangle-1"> var x = 50; </li>
-								<li id="cartesian-rectangle-2"> var y = 30; </li>
-								<li id="cartesian-result"> </li>
-							</p>
+						<!-- 	<code id="code-box">
+								<ul id="cartesian-canvas-text">
+									<li id="cartesian-rectangle-1"> var x = 50; </li>
+									<li id="cartesian-rectangle-2"> var y = 30; </li>
+									<li id="cartesian-result"> </li>
+								</ul>
+							</code> -->
 						</div>
 					</article>
 			    </div>
@@ -151,41 +158,48 @@
 			    	<article class="article-container container">
 						<h2 class="page-title"> 4. Cartesian Plane II</h2>	
 						<div id="cartesian2-text">					
-							<ul class="page-text" id="cartesian2-definition">
-								Now that we are familiar with the elements of the cartesian plane let's see how we place an element in the plane. <br>
+							<p class="page-text" id="cartesian2-definition">
+								Now that we are familiar with the elements of the Coordinate Plane let's see how we place an element in the plane. <br> <br>
 								Click on the different markers to move the circle and how the position of the circle updates.
+								
 							</ul>							
 						</div>
 						
 						<div class="canvas-container" id="cartesian2-container">	
 							<!--Here we insert our cartesian plane-->	
 							<div id="cartesian2-canvas" > </div>
-							<ul id="cartesian-canvas-text">
-								<li id="cartesian2-posx"> position x = 0; </li>
-								<li id="cartesian2-posy"> position y = 0; </li>
-								<!-- <li id="cartesian2-result"> </li> -->
-							</ul>
+							<code id="code-box">
+								<h4> Code Console </h4>
+								<ul id="cartesian-canvas-text">
+									<li id="cartesian2-posx"> var x = 0; </li>
+									<li id="cartesian2-posy"> var y = 0; </li>
+									<!-- <li id="cartesian2-result"> </li> -->
+								</ul>
+							</code>
 						</div>							
 					</article>
 			    </div>
 			     <!-- 5. CARTESIAN PLANE IN THE COMPUTER -->
 			    <div class="slide">
 			    	<article class="article-container container">
-						<h2 class="page-title"> 5. Cartesian Plane on the computer</h2>	
+						<h2 class="page-title"> 5. Cartesian Plane on the Computer</h2>	
 						<div id="comp-text">					
-							<ul class="page-text" id="comp-definition">
-								Once we have understood the behavior of the Cartesian Plane, it is important to distinguish it from the one in the computer. <br>
-								In most frameworks, the Y axis is positive going down, and we usually only use one quadrant. Each coordinate is limited by a given pixels
-							</ul>							
+							<p class="page-text" id="comp-definition">
+								Once we have understood the behavior of the Cartesian Plane, it is important to distinguish it from the one in the computer. <br> <br>
+								In most frameworks, the Y axis is positive going downwards, and we usually only use one quadrant. Each coordinate is limited by a given pixel.
+							</p>							
 						</div>						
 						<div class="canvas-container" id="comp-container">	
 							<!--Here we insert our cartesian plane-->	
 							<div id="comp-canvas" > </div>
-							<ul id="comp-canvas-text">
-								<li id="comp-posx"> position x = 0; </li>
-								<li id="comp-posy"> position y = 0; </li>
-								<!-- <li id="cartesian2-result"> </li> -->
-							</ul>
+							<code id="code-box">
+								<h4> Code Console </h4>
+								<ul id="comp-canvas-text">
+									<li id="comp-posx"> var x = 0; </li>
+									<li id="comp-posy"> var y = 0; </li>
+									<!-- <li id="cartesian2-result"> </li> -->
+								</ul>
+							</code>
 						</div>							
 					</article>
 			    </div>
@@ -194,18 +208,22 @@
 			    	<article class="article-container container">
 						<h2 class="page-title"> 6. Drawing Elements on the Screen</h2>	
 						<div id="circle-text">					
-							<ul class="page-text" id="circle-definition">
-								Different elements can be drawn on the Cartesian Plane on the screen. <br>
-								When drawing a Circle, besides a given X and Y position, we have to determine a radius. Given a variable called radius we give it a value to determine its size.
-							</ul>							
+							<p class="page-text" id="circle-definition">
+								Different elements can be drawn on the Cartesian Plane on the screen. <br> <br>
+
+								When Drawing a circle, besides a given X and Y position, we have to determine a radius. Given a variable called radius we give it a value to determine its size. Use the circle handler to change its radius value.
+							</p>							
 						</div>						
 						<div class="canvas-container" id="circle-container">	
 							<!--Here we insert our cartesian plane-->	
 							<div id="circle-canvas" > </div>
-							<ul id="circle-canvas-text">
-								<li id="circle-radius"> var radius = 20; </li>
-								<li id="circle-circle"> circle(100,100, radius); </li>
-							</ul>
+							<code id="code-box">
+								<h4> Code Console </h4>	
+								<ul id="circle-canvas-text">
+									<li id="circle-radius"> var radius = 20; </li>
+									<li id="circle-circle"> circle(100,100,radius; </li>
+								</ul>
+							</code>
 						</div>							
 					</article>
 			    </div>
@@ -214,20 +232,23 @@
 			    	<article class="article-container container">
 						<h2 class="page-title"> 7. Circle X position</h2>	
 						<div id="circlex-text">					
-							<ul class="page-text" id="circlex-definition">
-								Following the previous example, given a radius and a X position, we can drag the circle along the X axis and see how the value changes.<br>
-								We will now store the values of the radius x and y in variables as we learned in previous lessons.
-							</ul>							
+							<p class="page-text" id="circlex-definition">
+								Following the previous example, given a radius and a X position, we can Drag the circle along the X axis and see how the value changes.<br> <br>
+								We will now store the values of the radius, x and y in variables as we learned in previous lessons.
+							</p>							
 						</div>						
 						<div class="canvas-container" id="circlex-container">	
 							<!--Here we insert our cartesian plane-->	
 							<div id="circlex-canvas" > </div>
-							<ul id="circlex-canvas-text">
-								<li id="circlex-xpos"> var x = 200; </li>
-								<li id="circlex-ypos"> var y = 200; </li>
-								<li id="circlex-radius"> var radius = 40; </li>
-								<li id="circlex-circle"> circle(x, y, radius); </li>
-							</ul>
+							<code id="code-box">
+								<h4> Code Console </h4>	
+								<ul id="circlex-canvas-text">
+									<li id="circlex-xpos"> var x = 200; </li>
+									<li id="circlex-ypos"> var y = 200; </li>
+									<li id="circlex-radius"> var radius = 40; </li>
+									<li id="circlex-circle"> circle(x, y, radius); </li>
+								</ul>
+							</code>
 						</div>							
 					</article>
 			    </div>
@@ -236,20 +257,23 @@
 			    	<article class="article-container container">
 						<h2 class="page-title"> 8. Circle Y position</h2>	
 						<div id="circley-text">					
-							<ul class="page-text" id="circley-definition">
-								Following the previous example, given a radius and a X position, we can drag the circle along the X axis and see how the value changes.<br>
+							<p class="page-text" id="circley-definition">
+								Following the previous example, given a radius and a X position, we can drag the circle along the X axis and see how the value changes.<br> <br>
 								On the next lesson we will introduce a new property for the circle.
-							</ul>							
+							</p>							
 						</div>						
 						<div class="canvas-container" id="circley-container">	
 							<!--Here we insert our cartesian plane-->	
 							<div id="circley-canvas" > </div>
-							<ul id="circley-canvas-text">
-								<li id="circley-xpos"> var x = 200; </li>
-								<li id="circley-ypos"> var y = 200; </li>
-								<li id="circley-radius"> var radius = 40; </li>
-								<li id="circley-circle"> circle(x, y, radius); </li>
-							</ul>
+							<code id="code-box">
+								<h4> Code Console </h4>	
+								<ul id="circley-canvas-text">
+									<li id="circley-xpos"> var x = 200; </li>
+									<li id="circley-ypos"> var y = 200; </li>
+									<li id="circley-radius"> var radius = 40; </li>
+									<li id="circley-circle"> circle(x, y, radius); </li>
+								</ul>
+							</code>
 						</div>
 					</article>
 			    </div>
@@ -258,20 +282,23 @@
 			    	<article class="article-container container">
 						<h2 class="page-title"> 9. Circle and Color</h2>	
 						<div id="circle-color-text">					
-							<ul class="page-text" id="circle-color-definition">
-								Now that we know the behavior of the Circle given X and Y coordinates, let's keep customizing by giving the circle a color.<br>
-								Like was explained in the first lessons, variables allow us to store any information, in this case a string of color.
-							</ul>							
+							<p class="page-text" id="circle-color-definition">
+								Now that we know the behavior of the circle given X and Y coordinates, let's keep customizing by giving it a color.<br> <br>
+								Like it was explained in the first lessons, variables allow us to store any type of information, in this case a string of color.
+							</p>							
 						</div>						
 						<div class="canvas-container" id="circle-color-container">	
 							<!--Here we insert our cartesian plane-->	
 							<div id="circle-color-canvas" > </div>
-							<ul id="circle-color-canvas-text">
-								<li id="circle-color-xpos"> var x = 200; </li>
-								<li id="circle-color-ypos"> var y = 200; </li>
-								<li id="circle-color-radius"> var radius = 40; </li>
-								<li id="circle-color-circle"> circle(x, y, radius); </li>
-							</ul>
+							<code id="code-box">
+								<h4> Code Console </h4>	
+								<ul id="circle-color-canvas-text">
+									<li id="circle-color-xpos"> var x = 200; </li>
+									<li id="circle-color-ypos"> var y = 200; </li>
+									<li id="circle-color-radius"> var radius = 40; </li>
+									<li id="circle-color-circle"> circle(x, y, radius); </li>
+								</ul>
+							</code>
 						</div>
 					</article>
 			    </div>
@@ -281,18 +308,19 @@
 			    	<article class="article-container container">
 						<h2 class="page-title"> 10. Drawing multiple elements</h2>	
 						<div id="multiple-text">					
-							<ul class="page-text" id="multiple-definition">
+							<p class="page-text" id="multiple-definition">
 								After learning of different types of variables and how to draw elements in the Cartesian Plane, we can start using this concepts to create compositions.<br>								
-							</ul>							
+							</p>							
 						</div>						
 						<div class="canvas-container" id="multiple-container">	
 							<div id="picker">
 								<div id="multiple-circle-picker"> </div>
-								<h3 id="picker-text"> Click on the circle to draw on the canvas</h3>
+								<h4 id="picker-text"> Click on the circle to draw on the canvas</h4>
 							</div>
 							<!--Here we insert our cartesian plane-->	
 							<div id="multiple-canvas" > </div>
-							<code id="code" data-langue="javascript"> 
+							<code id="code-box">
+								<h4> Code Console </h4>							
 								<ul class="code-list"></ul> 
 							</code>
 						</div>							
