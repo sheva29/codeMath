@@ -75,4 +75,46 @@ $(document).ready(function () {
 	drawCircleHandler();
 	newCircleElementHandler.drag(rmoveCircle, rstartCircle);
 	newCircleElementHandler.big = newCircleElement;
+	//
+	//
+	//
+	//------- 7. Circle X position - Functions and Manipulation
+	drawCircleX();
+	drawCircleXHandler();
+	newCircleXElement.drag(moveCircleX, startCircleX, upCircleX);
+	newCircleXElement.sizer = newCircleXElementHandler;
+	//
+	//
+	//
+	//------- 8. Circle Y position - Functions and Manipulation
+	drawCircleY();
+	drawCircleYHandler();
+	newCircleYElement.drag(moveCircleY, startCircleY, upCircleY);
+	newCircleYElement.sizer = newCircleYElementHandler;
+	//
+	//
+	//
+	//------- 9. Circle Y position - Functions and Manipulation
+	drawCircleColor();
+	drawCircleColorHandler();
+	newCircleColorElement.drag(moveCircleColor, startCircleColor, upCircleColor);
+	newCircleColorElement.sizer = newCircleColorElementHandler;
+	//
+	//
+	//
+	//------- 12. Multiple Elements on the Screen - Functions and Manipulation
+	//This draws a circle on the screen
+	$multipleElementsPaperHandler.mouseup(function (e) {
+		var mouseX = e.offsetX;
+		var mouseY = e.offsetY;
+		if (multipleElementsPickerSelector) {
+			makeMultipleCircles(mouseX, mouseY);
+			multipleElementsPickerSelector = false;
+		}
+		console.log("I'here");
+	});
+	$multipleElementsPicker.click(function () {
+		multipleElementsPickerSelector = !multipleElementsPickerSelector;
+		console.log("I'm being clicked");
+	});
 });

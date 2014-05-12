@@ -152,7 +152,7 @@
 						<h2 class="page-title"> 4. Cartesian Plane II</h2>	
 						<div id="cartesian2-text">					
 							<ul class="page-text" id="cartesian2-definition">
-								Now that we are familiar with the elements of the cartesian plane let's see how we place an element in the plane.<br>
+								Now that we are familiar with the elements of the cartesian plane let's see how we place an element in the plane. <br>
 								Click on the different markers to move the circle and how the position of the circle updates.
 							</ul>							
 						</div>
@@ -174,7 +174,7 @@
 						<h2 class="page-title"> 5. Cartesian Plane on the computer</h2>	
 						<div id="comp-text">					
 							<ul class="page-text" id="comp-definition">
-								Once we have understood the behavior of the Cartesian Plane, it is important to distinguish it from the one in the computer <br>
+								Once we have understood the behavior of the Cartesian Plane, it is important to distinguish it from the one in the computer. <br>
 								In most frameworks, the Y axis is positive going down, and we usually only use one quadrant. Each coordinate is limited by a given pixels
 							</ul>							
 						</div>						
@@ -204,17 +204,102 @@
 							<div id="circle-canvas" > </div>
 							<ul id="circle-canvas-text">
 								<li id="circle-radius"> var radius = 20; </li>
-								<li id="circle-radius"> circle(100,100, radius); </li>
+								<li id="circle-circle"> circle(100,100, radius); </li>
 							</ul>
 						</div>							
 					</article>
 			    </div>
-			    <div class="slide"> Slide 8 </div>
-			    <div class="slide"> Slide 9 </div>
-			    <div class="slide"> Slide 10 </div>
+			    <!-- 7. THE CIRCLE ON THE X AXIS -->
+			    <div class="slide"> 
+			    	<article class="article-container container">
+						<h2 class="page-title"> 7. Circle X position</h2>	
+						<div id="circlex-text">					
+							<ul class="page-text" id="circlex-definition">
+								Following the previous example, given a radius and a X position, we can drag the circle along the X axis and see how the value changes.<br>
+								We will now store the values of the radius x and y in variables as we learned in previous lessons.
+							</ul>							
+						</div>						
+						<div class="canvas-container" id="circlex-container">	
+							<!--Here we insert our cartesian plane-->	
+							<div id="circlex-canvas" > </div>
+							<ul id="circlex-canvas-text">
+								<li id="circlex-xpos"> var x = 200; </li>
+								<li id="circlex-ypos"> var y = 200; </li>
+								<li id="circlex-radius"> var radius = 40; </li>
+								<li id="circlex-circle"> circle(x, y, radius); </li>
+							</ul>
+						</div>							
+					</article>
+			    </div>
+			    <!-- 8. THE CIRCLE ON THE Y AXIS -->
+			    <div class="slide"> 
+			    	<article class="article-container container">
+						<h2 class="page-title"> 8. Circle Y position</h2>	
+						<div id="circley-text">					
+							<ul class="page-text" id="circley-definition">
+								Following the previous example, given a radius and a X position, we can drag the circle along the X axis and see how the value changes.<br>
+								On the next lesson we will introduce a new property for the circle.
+							</ul>							
+						</div>						
+						<div class="canvas-container" id="circley-container">	
+							<!--Here we insert our cartesian plane-->	
+							<div id="circley-canvas" > </div>
+							<ul id="circley-canvas-text">
+								<li id="circley-xpos"> var x = 200; </li>
+								<li id="circley-ypos"> var y = 200; </li>
+								<li id="circley-radius"> var radius = 40; </li>
+								<li id="circley-circle"> circle(x, y, radius); </li>
+							</ul>
+						</div>
+					</article>
+			    </div>
+			     <!-- 9. CIRCLE AND COLOR -->
+			    <div class="slide">
+			    	<article class="article-container container">
+						<h2 class="page-title"> 9. Circle and Color</h2>	
+						<div id="circle-color-text">					
+							<ul class="page-text" id="circle-color-definition">
+								Now that we know the bahavior of the Circle given X and Y coordinates, let's keep customizing by giving the circle a color.<br>
+								Like was explained in the first lessons, variables allow us to store any information, in this case a string of color.
+							</ul>							
+						</div>						
+						<div class="canvas-container" id="circle-color-container">	
+							<!--Here we insert our cartesian plane-->	
+							<div id="circle-color-canvas" > </div>
+							<ul id="circle-color-canvas-text">
+								<li id="circle-color-xpos"> var x = 200; </li>
+								<li id="circle-color-ypos"> var y = 200; </li>
+								<li id="circle-color-radius"> var radius = 40; </li>
+								<li id="circle-color-circle"> circle(x, y, radius); </li>
+							</ul>
+						</div>
+					</article>
+			    </div>
 			    <div class="slide"> Slide 11 </div>
-			    <div class="slide"> Slide 12 </div>
-			    
+			    <!-- 12. DRAWING MULTIPLE ELEMENTS -->
+			    <div class="slide"> 
+			    	<article class="article-container container">
+						<h2 class="page-title"> 12. Drawing multiple elements</h2>	
+						<div id="multiple-text">					
+							<ul class="page-text" id="multiple-definition">
+								To Be Introduced<br>
+								
+							</ul>							
+						</div>						
+						<div class="canvas-container" id="multiple-container">	
+							<div id="picker">
+								<div id="multiple-circle-picker"> </div>
+								<h3 id="picker-text"> Click on the circle to draw on the canvas</h3>
+							</div>
+							<!--Here we insert our cartesian plane-->	
+							<div id="multiple-canvas" > </div>
+							<code id="code" data-langue="javascript"> 
+								<ul class="code-list"></ul> 
+							</code>
+						</div>							
+					</article>
+			    </div>
+			    <!-- These are the arrows for horizontal navigation -->
 			    <div class="controlArrow prev"></div>
 			    <div class="controlArrow next"></div>
 				

@@ -212,7 +212,7 @@ updateCompModelView = function () {
 	$posXHandler.text(posXHtmlString);
 	$posYHandler.text(posYHtmlString);
 }
-// 5. Cartesian Plane on the Computer
+// 6. Drawing elements on the Plane
 //
 // 
 //
@@ -221,7 +221,6 @@ drawCircleCircle = function () {
 		fill: "blue",
 		opacity: .8
 	});
-	// console.log(newCircleElement);
 }
 drawCircleHandler = function () {
 	newCircleElementHandler = circlePaper.circle(225, 225, 10).attr({
@@ -250,6 +249,418 @@ updateCircleModelView = function () {
 	var $circleRadiusHandler = $("#circle-radius");
 	var radiusString = " var radius = " + parseInt(circleRadiusVal) + ";";
 	$circleRadiusHandler.text(radiusString);
+}
+// 7. Circle X position
+//
+// 
+//
+drawCircleX = function () {
+	newCircleXElement = circleXPaper.circle(200, 200, 40).attr({
+		fill: "blue",
+		opacity: .8
+	});
+}
+drawCircleXHandler = function () {
+	newCircleXElementHandler = circleXPaper.circle(225, 225, 10).attr({
+		fill: "lightblue"
+	});
+	newCircleXElementHandler.node.id = "circlex-handler";
+	var $newCircleXElementHandler = $("#circlex-handler");
+	$newCircleXElementHandler.hide();
+}
+var startCircleX = function () {
+	// storing original coordinates
+	this.ox = this.attr("cx");
+	// this.oy = this.attr("cy");
+	this.sizer.ox = this.sizer.attr("cx");
+	// this.sizer.oy = this.sizer.attr("cy")
+	this.attr({
+		opacity: 1
+	});
+	this.sizer.attr({
+		opacity: 1
+	});
+},
+	moveCircleX = function (dx, dy) {
+		// move will be called with dx and dy
+		this.attr({
+			cx: this.ox + dx
+		});
+		this.sizer.attr({
+			cx: this.sizer.ox + dx
+		});
+		newCircleXElementPos = newCircleXElement.node.attributes[0].nodeValue;
+		updateCircleXModelView();
+	},
+	upCircleX = function () {
+		// restoring state
+		this.attr({
+			opacity: .5
+		});
+		this.sizer.attr({
+			opacity: .5
+		});
+	};
+updateCircleXModelView = function () {
+	var $circleXPosHandler = $("#circlex-xpos");
+	var posString = " var x = " + parseInt(newCircleXElementPos) + ";";
+	$circleXPosHandler.text(posString);
+}
+// 8. Circle Y position
+//
+// 
+//
+drawCircleY = function () {
+	newCircleYElement = circleYPaper.circle(200, 200, 40).attr({
+		fill: "blue",
+		opacity: .8
+	});
+}
+drawCircleYHandler = function () {
+	newCircleYElementHandler = circleYPaper.circle(225, 225, 10).attr({
+		fill: "lightblue"
+	});
+	newCircleYElementHandler.node.id = "circley-handler";
+	var $newCircleYElementHandler = $("#circley-handler");
+	$newCircleYElementHandler.hide();
+}
+var startCircleY = function () {
+	// storing original coordinates
+	// this.ox = this.attr("cx");
+	this.oy = this.attr("cy");
+	// this.sizer.ox = this.sizer.attr("cx");
+	this.sizer.oy = this.sizer.attr("cy")
+	this.attr({
+		opacity: 1
+	});
+	this.sizer.attr({
+		opacity: 1
+	});
+},
+	moveCircleY = function (dx, dy) {
+		// move will be called with dx and dy
+		this.attr({
+			cy: this.oy + dy
+		});
+		this.sizer.attr({
+			cy: this.sizer.oy + dy
+		});
+		newCircleYElementPos = newCircleYElement.node.attributes[1].nodeValue;
+		updateCircleYModelView();
+	},
+	upCircleY = function () {
+		// restoring state
+		this.attr({
+			opacity: .5
+		});
+		this.sizer.attr({
+			opacity: .5
+		});
+	};
+updateCircleYModelView = function () {
+	var $circleYPosHandler = $("#circley-ypos");
+	var posString = " var y = " + parseInt(newCircleYElementPos) + ";";
+	$circleYPosHandler.text(posString);
+}
+// 9. Circle and Color
+//
+// 
+//
+drawCircleColor = function () {
+	newCircleColorElement = circleColorPaper.circle(200, 200, 40).attr({
+		fill: "blue",
+		opacity: .8
+	});
+}
+drawCircleColorHandler = function () {
+	newCircleColorElementHandler = circleColorPaper.circle(225, 225, 10).attr({
+		fill: "lightblue"
+	});
+	newCircleColorElementHandler.node.id = "circle-color-handler";
+	var $newCircleColorElementHandler = $("#circle-color-handler");
+	$newCircleColorElementHandler.hide();
+}
+var startCircleColor = function () {
+	// storing original coordinates
+	this.ox = this.attr("cx");
+	this.oy = this.attr("cy");
+	this.sizer.ox = this.sizer.attr("cx");
+	this.sizer.oy = this.sizer.attr("cy")
+	this.attr({
+		opacity: 1
+	});
+	this.sizer.attr({
+		opacity: 1
+	});
+},
+	moveCircleColor = function (dx, dy) {
+		// move will be called with dx and dy
+		this.attr({
+			cx: this.ox + dx,
+			cy: this.oy + dy
+		});
+		this.sizer.attr({
+			cx: this.sizer.ox + ox,
+			cy: this.sizer.oy + dy
+		});
+		newCircleColorElementPos = newCircleColorElement.node.attributes[1].nodeValue;
+		updateCircleColorModelView();
+	},
+	upCircleColor = function () {
+		// restoring state
+		this.attr({
+			opacity: .5
+		});
+		this.sizer.attr({
+			opacity: .5
+		});
+	};
+updateCircleColorModelView = function () {
+	var $circleColorPosXHandler = $("#circle-color-xpos");
+	var posXString = " var y = " + parseInt(newCircleYElementPos) + ";";
+	$circleColorPosHandler.text(posXString);
+	var $circleColorPosYHandler = $("#circle-color-ypos");
+	var posYString = " var y = " + parseInt(newCircleYElementPos) + ";";
+	$circleYPosHandler.text(posYString);
+}
+// 12. Cartesian Plane on the Computer
+//
+// 
+//
+function makeMultipleCircles(mouseX, mouseY) {
+	//We call it before our circles are dragged so that their array is waiting to store the information
+	var radius;
+	var fill;
+	var circle = multipleElementsPaper.circle(mouseX, mouseY, 50).attr({
+		fill: "#f0f0f0",
+		stroke: "none",
+		opacity: .5,
+	});
+	// We add an ID and a class to the circle
+	var ourCircle = $("circle").last();
+	ourCircle.attr("class", "circle-" + multipleCirclesCounter);
+	// And then finally push it to our array of circles
+	multipleCircles.push(circle);
+	//Passing mouseX,mouseY and the circle counter
+	var handlerPos = [mouseX + 35, mouseY + 35];
+	var s = multipleElementsPaper.circle(handlerPos[0], handlerPos[1], 10).attr({
+		fill: "000000",
+		stroke: "none",
+		opacity: .5
+	});
+	//We add an id and a class to our little circle.
+	s.node.id = multipleSizerCounter;
+	var sizerClass = $('circle').last();
+	sizerClass.attr("class", "main-circle sizer");
+	var newSizerClass = $(".sizer");
+	s.hide();
+	//We now assign a handler for each little circle added and a main circle in order to hide them
+	var circleClass = $(".circle-" + String(multipleCirclesCounter));
+	var sizerID = $("#" + String(multipleSizerCounter));
+	circleClass.mouseenter(function () {
+		sizerID.toggle();
+	});
+	circleClass.mouseleave(function () {
+		sizerID.hide();
+	});
+	sizerID.mouseenter(function () {
+		$(this).toggle();
+	});
+	sizerID.mouseleave(function () {
+		$(this).hide();
+	});
+	//We add some resizing and dragging properties
+	var start = function () {
+		//storing original coordinates
+		this.ox = this.attr("cx");
+		this.oy = this.attr("cy");
+		this.sizer.ox = this.sizer.attr("cx");
+		this.sizer.oy = this.sizer.attr("cy")
+		this.attr({
+			opacity: 1
+		});
+		this.sizer.attr({
+			opacity: 1
+		});
+	}, move = function (dx, dy) {
+			// move will be called with dx and dy
+			this.attr({
+				cx: this.ox + dx,
+				cy: this.oy + dy
+			});
+			this.sizer.attr({
+				cx: this.sizer.ox + dx,
+				cy: this.sizer.oy + dy
+			});
+			//This is the key function to change 
+			updateModelMultiple(this.attrs.cx, this.attrs.cy, this.node.className.baseVal, this.attrs.r);
+		}, up = function () {
+			// restoring state
+			this.attr({
+				opacity: .5
+			});
+			this.sizer.attr({
+				opacity: .5
+			});
+		}, rstart = function () {
+			// storing original coordinates
+			this.ox = this.attr("cx");
+			this.oy = this.attr("cy");
+			this.big.or = this.big.attr("r");
+		}, rmove = function (dx, dy) {
+			// move will be called with dx and dy
+			this.attr({
+				cx: this.ox + dy,
+				cy: this.oy + dy
+			});
+			this.big.attr({
+				r: this.big.or + (dy < 0 ? -1 : 1) * Math.sqrt(2 * dy * dy)
+			});
+			updateModelMultiple(this.attrs.cx, this.attrs.cy, this.node.className.baseVal, this.attrs.r);
+		};
+	circle.drag(move, start, up);
+	circle.sizer = s;
+	s.drag(rmove, rstart);
+	s.big = circle;
+	//Here we create our HTML elements
+	var myCodeList = $(".code-list");
+	var htmlString = "<li class='circle-" + multipleCirclesCounter + "'> <span class='circle-color'> var color = <div class='circle-color-input' contentEditable autocorrect='off'> type a color</div> ; </span> <br> <span class='circle-radius'> This is a test </span> <br> <span class='circle'> This is a test </span> </li>";
+	myCodeList.append(htmlString);
+	updateListMultiple();
+	console.log(circle.attrs.fill);
+	passingColorMultiple(circle.attrs.fill);
+	circle.attrs.fill = multipleHex;
+	// console.log(circle);
+	multipleCirclesCounter++;
+	multipleSizerCounter++;
+	//I could also return a circle if I wanted
+	// return circle;
+}
+//This function updates the x,y position and radius based on the class of the element
+function updateModelMultiple(x, y, _class, r) {
+	var len = multipleCircles.length;
+	for (var i = 0; i < len; i++) {
+		//We check if the circle that's gonna be moved exists through its class and the we
+		if (multipleCircles[i].node.className.baseVal == _class) {
+			multipleCircles[i].attrs.cx = x;
+			multipleCircles[i].attrs.cy = y;
+			multipleCircles[i].attrs.r = r;
+		}
+	}
+	updateListMultiple();
+}
+//This function updates the information in the HTML from the circles
+function updateListMultiple() {
+	var len = multipleCircles.length;
+	for (var i = 0; i < len; i++) {
+		//We create one reference. This makes looking for one element more effective. Unless we need to search for a particular element
+		var currentItem = multipleCircles[i];
+		var updateStringRadius = "var radius = " + parseInt(currentItem.attrs.r) + ";";
+		var updateStringCircle = "circle (" + currentItem.attrs.cx + " ," + currentItem.attrs.cy + ", radius)";
+		//This is the div Item for the particular div of each element
+		var divItem = $('.code-list').find('li.circle-' + (i + 1));
+		var radiusItem = divItem.find("span.circle-radius");
+		var circleItem = divItem.find("span.circle");
+		radiusItem.text(updateStringRadius);
+		circleItem.text(updateStringCircle);
+	}
+}
+
+function passingColorMultiple(thisObjColor) {
+	var $circleLi = $("li.circle-" + multipleCirclesCounter);
+	var $colorFieldSpan = $circleLi.find("span.circle-color");
+	var $colorFieldClass = $($colorFieldSpan).find(".circle-color-input");
+	console.log($circleLi[0].className);
+	console.log(document.getElementsByClassName("li.circle" + multipleCirclesCounter));
+	// console.dir(document.documentElement);
+	$colorFieldClass.click(function () {
+		console.log("I'm being clicked");
+	});
+	var $contentEditable = $('[contenteditable]');
+	$contentEditable.on('focus', function () {
+		var $this = $(this);
+		$this.data('before', $this.html());
+		return $this;
+	});
+	$contentEditable.on('blur keyup paste', function () {
+		var $this = $(this);
+		if ($this.data('before') !== $this.html()) {
+			$this.data('before', $this.html());
+			$this.trigger('change');
+		}
+		return $this;
+	});
+	$colorFieldClass.focus(function () {
+		console.log(multipleColorArray);
+	});
+	$colorFieldClass.on('change', function () {
+		var inputText = $(this).text();
+		if (inputText.length > 0) {
+			$.ajax({
+				dataType: 'jsonp',
+				url: "http://www.colourlovers.com/api/colors?keywords=" + inputText + "&numResults=20&format=json&jsonCallback=?"
+			}).then(function (data) {
+				multipleColorArray = data.map(function (color) {
+					return toProperHexMultiple(color.hex);
+				});
+				multipleHex = multipleColorArray[multipleColorIndex];
+				$colorFieldClass.css("color", multipleHex);
+				thisObjColor = multipleHex;
+				updateCircleColorMultiple(multipleHex, $circleLi[0].className);
+			});
+		}
+	});
+	$colorFieldClass.keyup(function () {
+		typeTimer = setTimeout(completeColor, multipleTypeTimer);
+	});
+	$colorFieldClass.keydown(function (e) {
+		if (e.keyCode == 13 || e.charCode == 13) {
+			var color = $circleColor.css("color");
+			var text = $circleColor.text();
+			return false;
+		} else if (e.keyCode == 38 || e.charCode == 38) {
+			toggleColor('up');
+			return false;
+		} else if (e.keyCode == 40 || e.charCode == 40) {
+			toggleColor('down');
+			return false;
+		}
+		clearTimeout(multipleTypeTimer);
+	});
+}
+
+function toProperHexMultiple(hex) {
+	hex = hex.toLowerCase();
+	return hex ? (hex != 'ffffff' ? "#" + hex : "#eee") : "#000";
+	console.log(hex);
+}
+
+function toggleColor(word) {
+	if (word == 'up') {
+		multipleColorIndex++;
+		if (multipleColorIndex >= multipleColorArray.length) multipleColorIndex = 0;
+	} else {
+		multipleColorIndex--;
+		if (multipleColorIndex < 0) multipleColorIndex = multipleColorArray.length - 1;
+	}
+	multipleHex = multipleColorArray[multipleColorIndex];
+}
+
+function completeColor() {
+	var color = $(".circleColor").text();
+	if (color != multipleLastColor && color != '') {
+		multipleLastColor = color;
+	}
+	clearTimeout(multipleTypeTimer);
+}
+
+function updateCircleColorMultiple(newColor, handlerClass) {
+	var len = multipleCircles.length;
+	for (var i = 0; i < len; i++) {
+		if (multipleCircles[i].node.className.baseVal == handlerClass) {
+			multipleCircles[i].attr("fill", newColor);
+		}
+	}
 }
 //
 //
