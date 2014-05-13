@@ -21,7 +21,7 @@ rmoveVariables = function (dx, dy) {
 	updateXposVariables();
 };
 updateXposVariables = function () {
-	var posXString = "X = " + String(variablesSquare.node.attributes[3].nodeValue);
+	var posXString = "x = " + String(variablesSquare.node.attributes[3].nodeValue);
 	$variablesCanvasTextHandler.text(posXString);
 }
 // 2. Variables and Equations
