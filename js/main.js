@@ -126,5 +126,5 @@ $(document).ready(function () {
 	// var findLis = $(".fullPage-slidesNav").find("span");
 	// console.log(findLis);
 	//This function adds unique classes to the navigation dots
-	navigationDotsId();
+	navigationDotsIdAndClass();
 });

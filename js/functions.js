@@ -666,11 +666,13 @@ function updateCircleColorMultiple(newColor, handlerClass) {
 //
 // 
 // Navigation Dots
-navigationDotsId = function () {
+navigationDotsIdAndClass = function () {
 	var findLis = $(".fullPage-slidesNav").find("span");
+	findLis.addClass("nav-dots");
 	findLis.each(function (i) {
 		var $this = $(this);
-		$this.addClass('nav-dot-' + i);
+		// $this.addClass('nav-dot-' + i);
+		$this.attr('id', 'nav-dots-' + i);
 	});
 }
 //
