@@ -662,5 +662,16 @@ function updateCircleColorMultiple(newColor, handlerClass) {
 		}
 	}
 }
+// 
+//
+// 
+// Navigation Dots
+navigationDotsId = function () {
+	var findLis = $(".fullPage-slidesNav").find("span");
+	findLis.each(function (i) {
+		var $this = $(this);
+		$this.addClass('nav-dot-' + i);
+	});
+}
 //
 //

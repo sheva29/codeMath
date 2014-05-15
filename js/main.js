@@ -3,8 +3,12 @@ $(document).ready(function () {
 	$('#fullpage').fullpage({
 		slidesColor: [ /*'#d36257',*/ '#59d159', '#d15959', '#59d18f', '#5760d3'],
 		anchors: [ /*'zeroPage',*/ 'firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+		//This connects the menu navigation to my slides
 		menu: '#menu',
-		continuousVertical: true
+		//Inifite scroll
+		// continuousVertical: true,
+		//This enables dot navigation
+		slidesNavigation: true
 	});
 	//
 	//
@@ -117,4 +121,10 @@ $(document).ready(function () {
 		multipleElementsPickerSelector = !multipleElementsPickerSelector;
 		console.log("I'm being clicked");
 	});
+	//This is a test
+	// $(".fullPage-slidesNav span").attr('class', "span-class");
+	// var findLis = $(".fullPage-slidesNav").find("span");
+	// console.log(findLis);
+	//This function adds unique classes to the navigation dots
+	navigationDotsId();
 });
