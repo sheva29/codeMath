@@ -678,6 +678,184 @@ FrameWork elements
     min-width: 200px;
 }
 
+/*------- Navigation Dots classes -------*/
+
+#nav-dots-container{
+    bottom: 0px;
+    background-color: #2d2d2d;
+    height: 60px;
+    left: 0px;
+    margin-left: 0px;
+}
+div.fullPage-slidesNav{
+    width: 100%;
+}
+
+div.fullPage-slidesNav ul{
+    display: table;
+    margin: 0 auto;
+    
+}
+
+.fullPage-slidesNav .active span {
+    border: 1.5px solid #b9d656 !important;
+}
+
+#nav-dots-ul{
+    margin-top: 10px;
+
+}
+
+.nav-dots-li{
+    width: 14px !important;
+    height: 13px !important;
+    margin: 5px 30px !important;
+    position: relative !important;
+
+}
+
+
+/*------- <spans> specifically --------*/
+/* This is a class for all the nav dots - we call important in order to overwrite fullPage.js css*/
+
+.nav-dots {
+    /*width:  100%;*/
+    top: 0px !important;
+    left: 0px !important;
+    width: 20px !important;
+    height: 20px !important;
+    border: 1px solid #676767 !important;
+    background: rgba(255, 255, 255, 0) !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    z-index: 1 !important;
+
+}
+/* We tell to look for those to classes and the sibling of active to display the text*/
+.fullPage-slidesNav .active + span {
+    visibility: visible !important;
+    text-transform: uppercase;
+    font-size: 10px;
+    border: 0px;
+
+}
+.nav-dot-title{
+    visibility: hidden;
+    margin-top: 22px;
+}
+
+#nav-dot-title-0{
+    margin-left: -30px;    
+}
+
+#nav-dot-title-1{
+    margin-left: -20px;   
+}
+
+#nav-dot-title-2{
+    margin-left: -58px;
+    width: 140px;   
+}
+
+#nav-dot-title-3{
+    margin-left: -40px;
+    width: 100px;   
+}
+
+#nav-dot-title-4{
+    margin-left: -44px;
+    width: 108px; 
+}
+
+#nav-dot-title-5{
+    margin-left: -86px;
+    width: 200px; 
+}
+
+#nav-dot-title-6{
+    margin-left: -63px;
+    width: 145px; 
+}
+
+#nav-dot-title-7{
+    margin-left: -41px;
+    width: 145px; 
+}
+
+#nav-dot-title-8{
+    margin-left: -41px;
+    width: 145px; 
+}
+
+#nav-dot-title-9{
+    margin-left: -34px;
+    width: 145px;  
+}
+
+#nav-dot-title-10{
+    margin-left: -73px;
+    width: 170px;
+}
+
+#nav-dot-title-11{
+    margin-left: -14px;
+    width: 100px;
+}
+
+#nav-dots-0{
+   /* width: 35px;
+    height: 35px;
+    margin-left: 20px;
+    padding-right: 20px;*/
+}
+
+#nav-dots-1{
+ /*   padding-left: 20px;
+    padding-right: 20px;*/
+}
+
+#nav-dots-2{
+    
+}
+
+#nav-dots-3{
+    
+}
+
+#nav-dots-4{
+    
+}
+
+#nav-dots-5{
+    
+}
+
+#nav-dots-6{
+    
+}
+
+#nav-dots-7{
+    
+}
+
+#nav-dots-8{
+    
+}
+
+#nav-dots-9{
+    
+}
+
+#nav-dots-10{
+    
+}
+
+#nav-dots-11{
+    
+}
+
 
 /*This is to overwrite the classes that fullpage.js adds.
 /

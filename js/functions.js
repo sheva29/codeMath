@@ -665,15 +665,38 @@ function updateCircleColorMultiple(newColor, handlerClass) {
 // 
 //
 // 
-// Navigation Dots
+// Navigation Dots <li> & <spans>
+mainDivNavDotsId = function () {
+	var $divContainerHandler = $(".fullPage-slidesNav");
+	$divContainerHandler.attr("id", "nav-dots-container");
+}
 navigationDotsIdAndClass = function () {
-	var findLis = $(".fullPage-slidesNav").find("span");
-	findLis.addClass("nav-dots");
-	findLis.each(function (i) {
+	var $findSpans = $(".fullPage-slidesNav").find("span");
+	var $findUl = $(".fullPage-slidesNav").find("ul");
+	var $findLi = $(".fullPage-slidesNav").find("li");
+	$findLi.addClass("nav-dots-li");
+	$findLi.each(function (i) {
 		var $this = $(this);
-		// $this.addClass('nav-dot-' + i);
+		$this.attr("id", "nav-dots-li-" + i);
+	});
+	$findUl.attr("id", "nav-dots-ul");
+	//We pass a class
+	$findSpans.addClass("nav-dots");
+	$findSpans.each(function (i) {
+		var $this = $(this);
+		//We add a unique id
 		$this.attr('id', 'nav-dots-' + i);
 	});
+}
+//This gives titles to the nav dots
+generatingNavDotsTitles = function () {
+	var liLength = $("#nav-dots-ul").find("li").length;
+	for (var i = 0; i < liLength; i++) {
+		var liHandler = $("ul#nav-dots-ul").find("#nav-dots-li-" + i);
+		var navDotString = "<span class='nav-dot-title' id='nav-dot-title-" + i + "'>" + navigationDotsText[i] + "</span>";
+		liHandler.append(navDotString);
+		// console.log($("nav-dots-li"))
+	}
 }
 //
 //

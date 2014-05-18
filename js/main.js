@@ -115,16 +115,20 @@ $(document).ready(function () {
 			makeMultipleCircles(mouseX, mouseY);
 			multipleElementsPickerSelector = false;
 		}
-		console.log("I'here");
+		// console.log("I'here");
 	});
 	$multipleElementsPicker.click(function () {
 		multipleElementsPickerSelector = !multipleElementsPickerSelector;
 		console.log("I'm being clicked");
 	});
-	//This is a test
-	// $(".fullPage-slidesNav span").attr('class', "span-class");
-	// var findLis = $(".fullPage-slidesNav").find("span");
-	// console.log(findLis);
+	//
+	//
+	//
+	//--------- Navigation Dots
 	//This function adds unique classes to the navigation dots
+	mainDivNavDotsId();
 	navigationDotsIdAndClass();
+	generatingNavDotsTitles();
+	// console.log($("#nav-dots-ul").find("li").length);
+	$("div#nav-dots-container").css("margin-left", "0px");
 });

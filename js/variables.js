@@ -154,3 +154,8 @@ var multipleColorArray = [],
 	multipleLastColor;
 //
 //
+//
+//Navigation Dots variables
+var navigationDotsText = ["Introduction", "Variables", "Variables & Equations", "Cartesian plane", "Cartesian plane II", "Cartesian plane on the screen", "Elements on the screen", "Circle X Position", "Circle Y Position", "Circle & Color", "Drawing Multiple Elements", "The end"];
+//
+//
