@@ -136,6 +136,101 @@ These are the elements for navigation bar
 }
 
 
+
+
+
+a:hover{
+  text-decoration: none;  
+}
+
+a:active{
+    
+}
+
+a {
+-webkit-transition-duration: 0.3s;
+-moz-transition-duration: 0.3s;
+-o-transition-duration: 0.3s;
+transition-duration: 0.3s;
+color: #4999c1;
+text-decoration: none;
+}
+
+/*---- What's Code Math*/
+#menu-1{
+    -webkit-transition-property: border color;
+    transition-property:   border color ;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    /*color: transparent;*/
+
+}
+
+#menu-1:hover{
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    color: white;
+}
+
+.active > #menu-1 {
+    color: #b9d657 !important;
+}
+
+/*---- Trajectory*/
+#menu-2{
+    -webkit-transition-property: border color;
+    transition-property:   border color ;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    /*color: transparent;*/
+
+}
+
+#menu-2:hover{
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    color: white;
+}
+
+.active > #menu-2 {
+    color: #b9d657 !important;
+}
+
+/*---- Framework*/
+#menu-3{
+    -webkit-transition-property: border color;
+    transition-property:   border color ;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    /*color: transparent;*/
+
+}
+
+#menu-3:hover{
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    color: white;
+}
+
+.active > #menu-3 {
+    color: #b9d657 !important;
+}
+
+/*----Contact */
+#menu-4{
+    -webkit-transition-property: border color;
+    transition-property:   border color ;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    /*color: transparent;*/
+
+}
+
+#menu-4:hover{
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    color: white;
+}
+
+.active > #menu-4 {
+    color: #b9d657 !important;
+}
+
+
+
+
 /*
 /
 /
