@@ -81,7 +81,8 @@ Let's get some help from BootStrap
 }
 
 body{
-    font-family: 'Gotham-Round-Book', 'sans-serif'; 
+    /*font-family: 'Gotham-Round-Book', 'sans-serif'; */
+    font-family: 'Open Sans', sans-serif;
     color: #EBE9E9;
 }
 
@@ -216,7 +217,7 @@ Trajectory elements
     margin: 90px auto 20px 50px;
     width: 400px;
    /* height: 300px;*/
-    font-size: 16px;
+    font-size: 18px;
 }
 #trajectory-image{
     margin-left: 60px;
@@ -255,7 +256,7 @@ FrameWork elements
 /*------- 1. Variables -------*/
 
 #variables-text{
-   font-size: 16px;
+   font-size: 18px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -296,7 +297,7 @@ FrameWork elements
 /*------- 2. Variables & Equations  -------*/
 
 #equations-text{
-    font-size: 16px;
+    font-size: 18px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -329,7 +330,7 @@ FrameWork elements
 /*------- 3. Cartesian Plane  -------*/
 
 #cartesian-text{
-   font-size: 16px;
+   font-size: 18px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -361,7 +362,7 @@ FrameWork elements
 /*------- 4. Cartesian Plane  -------*/
 
 #cartesian2-text{
-  font-size: 16px;
+    font-size: 18px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -393,7 +394,7 @@ FrameWork elements
 /*------- 5. Cartesian Plane In The Commputer -------*/
 
 #comp-text{
-    font-size: 16px;
+    font-size: 18px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -424,7 +425,7 @@ FrameWork elements
 /*------- 6. Circle on the Cartesian Plane -------*/
 
 #circle-text{
-    font-size: 16px;
+    font-size: 18px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -460,7 +461,7 @@ FrameWork elements
 /*------- 7. Circle on the X Axis -------*/
 
 #circlex-text{
-    font-size: 16px;
+    font-size: 18px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -496,7 +497,7 @@ FrameWork elements
 /*------- 8. Circle on the Y Axis -------*/
 
 #circley-text{
-    font-size: 16px;
+    font-size: 18px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -532,7 +533,7 @@ FrameWork elements
 /*------- 8. Circle on the Y Axis -------*/
 
 #circle-color-text{
-    font-size: 16px;
+    font-size: 18px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
@@ -568,7 +569,7 @@ FrameWork elements
 /*------- 10. Drawing multiple elements on the screen -------*/
 
 #multiple-text{
-    font-size: 16px;
+    font-size: 18px;
     max-width: 500px;
     min-width: 300px;
     margin: 0px 0px 0px 60px;
