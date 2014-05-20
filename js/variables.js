@@ -24,6 +24,7 @@ var variablesSquareSizer = variablesPaper.rect(130, 130, 30, 30).attr({
 	cursor: "drag",
 	opacity: 0.5
 });
+variablesSquareSizer.node.id = "square-sizer";
 var $variablesCanvasTextHandler = $("#variables-canvas-text");
 console.log(variablesSquareSizer);
 //
@@ -48,6 +49,7 @@ var rectangleHandlerEquations = equationsPaper.rect(40, 0, 10, 100).attr({
 	fill: "#bc5b7b",
 	stroke: "none"
 });
+rectangleHandlerEquations.node.id = "handler1";
 var rectangle2Equations = equationsPaper.rect(equationsRect2PosX, equationsRect2PosY, equationsRect2Width, equationsRect2Height).attr({
 	fill: "#5b98ba",
 	stroke: "none"
@@ -56,6 +58,7 @@ var rectangle2HandlerEquations = equationsPaper.rect(70, 0, 10, 100).attr({
 	fill: "#5b98ba",
 	stroke: "none"
 });
+rectangle2HandlerEquations.node.id = "handler2";
 // Some handlers
 var $rectangleOneTextEquations = $("#equations-rectangle-1"),
 	$rectangleTwoTextEquations = $("#equations-rectangle-2"),
@@ -68,6 +71,11 @@ var cartesianPaper = Raphael("cartesian-canvas", canvasWidth, canvasHeight);
 cartesianPaper.canvas.id = "cartesian-paper";
 //We create a handler for the id we just assigned
 var $cartesianPaperHandler = $("#cartesian-paper");
+var one = cartesianPaper.text(300, 100, "I").attr({
+	"stroke-width": "3",
+	"stroke": "#EBE9E9"
+});
+console.log(one);
 //
 //
 // 4. Cartesian Plane II

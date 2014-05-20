@@ -86,7 +86,7 @@ updateRectangleTwoEquations = function () {
 updateRectangleResult = function () {
 	var rectangleThreeStringEquations = "x + y = " + String(+rectangleEquations.node.attributes[2].nodeValue + +rectangle2Equations.node.attributes[2].nodeValue) + ";";
 	$rectangleResult.text(rectangleThreeStringEquations);
-	console.log("Result inserted");
+	// console.log("Result inserted");
 }
 // 3. Cartesian Plane
 //
@@ -699,7 +699,6 @@ generatingNavDotsTitles = function () {
 		var liHandler = $("ul#nav-dots-ul").find("#nav-dots-li-" + i);
 		var navDotString = "<span class='nav-dot-title' id='nav-dot-title-" + i + "'>" + navigationDotsText[i] + "</span>";
 		liHandler.append(navDotString);
-		// console.log($("nav-dots-li"))
 	}
 }
 //This is for the collapse menu icon
@@ -707,7 +706,6 @@ collapsingElement = function () {
 	var $findUl = $("#nav-dots-ul");
 	var newElement = "<li class='nav-dots-li' id='minimize'> <img id='caron' src='images/collapse_icon.svg' > </img> </li>";
 	$findUl.append(newElement);
-	console.log("I'm being called");
 }
 // $("#nav-dots-ul").append($(".collapsing-element"));
 //

@@ -389,6 +389,10 @@ FrameWork elements
     float: left;
 }
 
+#square-sizer{
+    cursor: move;
+}
+
 /*------- 2. Variables & Equations  -------*/
 
 #equations-text{
@@ -421,6 +425,15 @@ FrameWork elements
     float: left;
    /* margin: 400px;*/
 }
+
+#handler1{
+    cursor: ew-resize;
+}
+
+#handler2{
+    cursor: ew-resize;
+}
+
 
 /*------- 3. Cartesian Plane  -------*/
 
