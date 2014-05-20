@@ -129,6 +129,20 @@ $(document).ready(function () {
 	mainDivNavDotsId();
 	navigationDotsIdAndClass();
 	generatingNavDotsTitles();
-	// console.log($("#nav-dots-ul").find("li").length);
+	//This line removes the negative margin given by fullpage.js
 	$("div#nav-dots-container").css("margin-left", "0px");
+	//This adds the icon to the <ul>
+	collapsingElement();
+	var $toggleHandler = $("#toggle-icon");
+	var $collapseHandler = $("#caron");
+	$toggleHandler.slideToggle();
+	$collapseHandler.click(function () {
+		$(".fullPage-slidesNav").slideToggle("slow");
+		console.log("I'm being clicked");
+		$toggleHandler.slideToggle("slow");
+	});
+	$toggleHandler.on("click", function () {
+		$(this).slideToggle("slow");
+		$(".fullPage-slidesNav").slideToggle("slow");
+	});
 });

@@ -698,5 +698,12 @@ generatingNavDotsTitles = function () {
 		// console.log($("nav-dots-li"))
 	}
 }
+collapsingElement = function () {
+	var $findUl = $("#nav-dots-ul");
+	var newElement = "<li class='nav-dots-li' id='minimize'> <img id='caron' src='images/collapse_icon.svg' > </img> </li>";
+	$findUl.append(newElement);
+	console.log("I'm being called");
+}
+// $("#nav-dots-ul").append($(".collapsing-element"));
 //
 //

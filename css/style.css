@@ -280,7 +280,7 @@ These are the elements of content
 
 #codeMath-definition{
     float: left;
-    margin: 90px auto 20px 50px;
+    margin: 120px auto 20px 50px;
     width: 500px;
     height: 300px;
     font-size: 24px;
@@ -952,6 +952,18 @@ div.fullPage-slidesNav ul{
     
 }
 
+#caron{
+    border: 0px;
+    cursor: pointer;
+}
+
+#toggle-icon{
+    position: absolute;
+    bottom: 0px;
+    right: 16.5%;
+    cursor: pointer;
+}
+
 
 /*This is to overwrite the classes that fullpage.js adds.
 /
@@ -975,6 +987,8 @@ div.fullPage-slidesNav ul{
     font-size: 12px;
     padding-left: 8px;
 }
+
+
 
 
 
