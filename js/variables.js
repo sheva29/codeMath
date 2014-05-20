@@ -71,10 +71,52 @@ var cartesianPaper = Raphael("cartesian-canvas", canvasWidth, canvasHeight);
 cartesianPaper.canvas.id = "cartesian-paper";
 //We create a handler for the id we just assigned
 var $cartesianPaperHandler = $("#cartesian-paper");
-var one = cartesianPaper.text(300, 100, "I").attr({
-	"stroke-width": "3",
-	"stroke": "#EBE9E9"
+var x = cartesianPaper.text(190, -10, "X").attr({
+	"font-size": "18px",
+	"fill": "#EBE9E9",
+	"stroke-width": "1",
+	"stroke": "#EBE9E9",
+	"font-type": "serif"
 });
+var y = cartesianPaper.text(10, -190, "Y").attr({
+	"font-size": "18px",
+	"fill": "#EBE9E9",
+	"stroke-width": "1",
+	"stroke": "#EBE9E9",
+	"font-type": "serif"
+});
+var one = cartesianPaper.text(100, -100, "I").attr({
+	"font-size": "48px",
+	"fill": "#EBE9E9",
+	"stroke-width": "3",
+	"stroke": "#EBE9E9",
+	"font-type": "serif"
+});
+var two = cartesianPaper.text(-100, -100, "II").attr({
+	"font-size": "48px",
+	"fill": "#EBE9E9",
+	"stroke-width": "3",
+	"stroke": "#EBE9E9",
+	"font-type": "serif"
+});
+var three = cartesianPaper.text(-100, 100, "III").attr({
+	"font-size": "48px",
+	"fill": "#EBE9E9",
+	"stroke-width": "3",
+	"stroke": "#EBE9E9",
+	"font-type": "serif"
+});
+var four = cartesianPaper.text(100, 100, "IV").attr({
+	"font-size": "48px",
+	"fill": "#EBE9E9",
+	"stroke-width": "3",
+	"stroke": "#EBE9E9",
+	"font-type": "serif"
+});
+one.node.id = "one";
+two.node.id = "two";
+three.node.id = "three";
+four.node.id = "four";
 console.log(one);
 //
 //
