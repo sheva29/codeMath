@@ -964,13 +964,39 @@ div.fullPage-slidesNav ul{
     cursor: pointer;
 }
 
+/*
+/
+/
+/------- Contact Title ------- */
+
+#contact-title{
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+#contact-text{
+    float: left;
+    clear: both;
+    font-size: 24px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+#email-contact{
+    float: left;
+}
+
+.contact-text-element{
+    margin-left: 60px;
+}
+
 
 /*This is to overwrite the classes that fullpage.js adds.
 /
 */
 .tableCell{
     padding-top: 77px;
-
 }
 
 .table{

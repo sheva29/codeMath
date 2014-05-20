@@ -58,7 +58,8 @@ var rectangle2HandlerEquations = equationsPaper.rect(70, 0, 10, 100).attr({
 });
 // Some handlers
 var $rectangleOneTextEquations = $("#equations-rectangle-1"),
-	$rectangleTwoTextEquations = $("#equations-rectangle-2");
+	$rectangleTwoTextEquations = $("#equations-rectangle-2"),
+	$rectangleResult = $("#equations-result");
 //
 //
 // 3. Cartesian Plane

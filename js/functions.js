@@ -51,6 +51,7 @@ rmoveEquations = function (dx, dy) {
 	rectangle2HandlerEquations.node.attributes[0].nodeValue = String(equationsRect2HandlerNewX);
 	//We change the value of the text in our HTML
 	updateRectangleOneEquations();
+	updateRectangleResult();
 };
 //
 //
@@ -71,6 +72,7 @@ rmove2Equations = function (dx, dy) {
 		width: this.box.ow + dx
 	});
 	updateRectangleTwoEquations();
+	updateRectangleResult();
 };
 //These 3 funtions pass strings to our HTML updating the model view
 updateRectangleOneEquations = function () {
@@ -82,7 +84,9 @@ updateRectangleTwoEquations = function () {
 	$rectangleTwoTextEquations.text(rectangleTwoString);
 }
 updateRectangleResult = function () {
-	// var rectangleThreeStringEquations = "x + y = " + someVariable ";";
+	var rectangleThreeStringEquations = "x + y = " + String(+rectangleEquations.node.attributes[2].nodeValue + +rectangle2Equations.node.attributes[2].nodeValue) + ";";
+	$rectangleResult.text(rectangleThreeStringEquations);
+	console.log("Result inserted");
 }
 // 3. Cartesian Plane
 //
@@ -698,6 +702,7 @@ generatingNavDotsTitles = function () {
 		// console.log($("nav-dots-li"))
 	}
 }
+//This is for the collapse menu icon
 collapsingElement = function () {
 	var $findUl = $("#nav-dots-ul");
 	var newElement = "<li class='nav-dots-li' id='minimize'> <img id='caron' src='images/collapse_icon.svg' > </img> </li>";
