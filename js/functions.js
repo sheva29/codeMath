@@ -710,7 +710,7 @@ collapsingElement = function () {
 	var newElement = "<li class='nav-dots-li' id='minimize'> <img id='caron' src='images/collapse_icon.svg' > </img> </li>";
 	$findUl.append(newElement);
 }
-
+// this is for the toggle icon and all its elements
 uniqueContainerForToggleButton = function() {
 	var $divContainerHandler = $(".fullPage-slidesNav"); // we find our container created by fullPAge.js
 	var toggleContainer = $('<div class="consolidated-elements"> </div>'); // we create a new container for our toggle button
@@ -723,6 +723,4 @@ uniqueContainerForToggleButton = function() {
 	$divForToggle.append(toggleButton); // we append our button to the div
 	
 }
-// $("#nav-dots-ul").append($(".collapsing-element"));
-//
-//
+
