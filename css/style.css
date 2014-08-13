@@ -810,10 +810,11 @@ div.fullPage-slidesNav ul{
     border: 1.5px solid #b9d656 !important;
 }
 
-#nav-dots-ul{
-    margin-top: 10px;
+/* we could use this class with important to pass the margin but let's just do it on the navigationDotsIdAndClass function */
+/*.nav-dots-ul{
+    margin-top: 10px !important;
 
-}
+}*/
 
 .nav-dots-li{
     width: 14px !important;
@@ -971,12 +972,31 @@ div.fullPage-slidesNav ul{
 }
 
 #toggle-icon{
-    position: absolute;
+    position: relative;
     bottom: 0px;
-    right: 16.5%;
+    /*right: 16.5%;*/
+    float: right;
     cursor: pointer;
+    
 }
 
+#for-toggle{
+    margin: 0 auto;
+    position: relative;
+    width: 962px;
+}
+
+.consolidated-elements{
+    bottom: 0px;
+    /*background-color: #2d2d2d;*/
+    /*height: 60px;*/
+    /*left: 0px;*/
+    /*margin-left: 0px;*/
+    /*margin: 0 auto;*/
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+}
 /*
 /
 /

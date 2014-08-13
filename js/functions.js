@@ -679,33 +679,49 @@ navigationDotsIdAndClass = function () {
 	var $findUl = $(".fullPage-slidesNav").find("ul");
 	var $findLi = $(".fullPage-slidesNav").find("li");
 	$findLi.addClass("nav-dots-li");
-	$findLi.each(function (i) {
+	$findLi.each(function (i) { //fullPage.js assigns all a unique class depending on the number of pages, we use that to add a unique id
 		var $this = $(this);
-		$this.attr("id", "nav-dots-li-" + i);
+		$this.attr("id", "nav-dots-li-" + i); // This assigns a unique id to the classes
 	});
-	$findUl.attr("id", "nav-dots-ul");
-	//We pass a class
-	$findSpans.addClass("nav-dots");
-	$findSpans.each(function (i) {
+	$findUl.addClass("nav-dots-ul"); // we give the ul a class
+	var $dotsUl = $(".nav-dots-ul"); // we assign the class to a variable and give it a css value
+	$dotsUl.css({
+		"margin-top": "10px"
+	});
+	$findSpans.addClass("nav-dots"); //We pass a unique class to all the elements in the span
+	$findSpans.each(function (i) { 
 		var $this = $(this);
-		//We add a unique id
+		//We add a unique id to the span
 		$this.attr('id', 'nav-dots-' + i);
 	});
 }
 //This gives titles to the nav dots
 generatingNavDotsTitles = function () {
-	var liLength = $("#nav-dots-ul").find("li").length;
+	var liLength = $(".nav-dots-ul").find("li").length;
 	for (var i = 0; i < liLength; i++) {
-		var liHandler = $("ul#nav-dots-ul").find("#nav-dots-li-" + i);
+		var liHandler = $("ul.nav-dots-ul").find("#nav-dots-li-" + i);
 		var navDotString = "<span class='nav-dot-title' id='nav-dot-title-" + i + "'>" + navigationDotsText[i] + "</span>";
 		liHandler.append(navDotString);
 	}
 }
-//This is for the collapse menu icon
+//This is for the collapse menu icon in the active bar
 collapsingElement = function () {
-	var $findUl = $("#nav-dots-ul");
+	var $findUl = $("ul.nav-dots-ul");
 	var newElement = "<li class='nav-dots-li' id='minimize'> <img id='caron' src='images/collapse_icon.svg' > </img> </li>";
 	$findUl.append(newElement);
+}
+
+uniqueContainerForToggleButton = function() {
+	var $divContainerHandler = $(".fullPage-slidesNav"); // we find our container created by fullPAge.js
+	var toggleContainer = $('<div class="consolidated-elements"> </div>'); // we create a new container for our toggle button
+	toggleContainer.insertAfter($divContainerHandler); // we append to the main container our new element
+	var divForToggle = "<div id='for-toggle'> </div>"; // we create a div relative to the main div so we can center it an insert our toggle button
+	var $divForDiv = $('div.consolidated-elements'); // we find our div container for the toggle button
+	$divForDiv.append(divForToggle); // we insert our element
+	var $divForToggle = $("div#for-toggle"); // we create a handler for the new div
+	var toggleButton = '<img src="images/toggle_icon.svg" id="toggle-icon"> </img>'; // we create our toggle button
+	$divForToggle.append(toggleButton); // we append our button to the div
+	
 }
 // $("#nav-dots-ul").append($(".collapsing-element"));
 //
