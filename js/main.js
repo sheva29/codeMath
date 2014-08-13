@@ -139,12 +139,11 @@ $(document).ready(function() {
     var $collapseHandler = $("#caron");
     var $toggleHandler = $toggleHandlerMainContainer.children().children(); // we locate the new div with our toggle button
 
-    $toggleHandlerMainContainer.slideToggle();
+    $toggleHandlerMainContainer.slideToggle();// we hide our toggle button with its containers
 
     console.log($toggleHandler);
     $collapseHandler.click(function() {
         $(".fullPage-slidesNav").slideToggle("slow");
-        console.log("I'm being clicked");
         $toggleHandlerMainContainer.slideToggle("slow");
     });
 
@@ -152,6 +151,7 @@ $(document).ready(function() {
         $(".fullPage-slidesNav").slideToggle("slow");
         console.log("I'm toggling");
         $toggleHandlerMainContainer.slideToggle("slow");
+
 
     });
 });

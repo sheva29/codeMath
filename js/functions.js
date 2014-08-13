@@ -714,7 +714,7 @@ collapsingElement = function () {
 uniqueContainerForToggleButton = function() {
 	var $divContainerHandler = $(".fullPage-slidesNav"); // we find our container created by fullPAge.js
 	var toggleContainer = $('<div class="consolidated-elements"> </div>'); // we create a new container for our toggle button
-	toggleContainer.insertAfter($divContainerHandler); // we append to the main container our new element
+	toggleContainer.insertBefore($divContainerHandler); // we append to the main container our new element
 	var divForToggle = "<div id='for-toggle'> </div>"; // we create a div relative to the main div so we can center it an insert our toggle button
 	var $divForDiv = $('div.consolidated-elements'); // we find our div container for the toggle button
 	$divForDiv.append(divForToggle); // we insert our element
